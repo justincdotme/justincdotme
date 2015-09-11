@@ -1,0 +1,253 @@
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  color: #ccc;
+  font-size: 160%;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  /*For Bootstrap ScrollSpy*/ }
+
+p {
+  line-height: 150%; }
+
+h1.js-error {
+  margin-top: 20%;
+  color: #ba0000; }
+
+a:hover {
+  text-decoration: none; }
+
+.btn-inverse {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+#home {
+  padding-top: 60px;
+  min-height: 100%; }
+  #home h1.home-head {
+    margin-top: 18%;
+    font-family: 'Raleway Dots', cursive;
+    margin-right: auto;
+    margin-left: auto; }
+  #home #learn-more {
+    margin-top: 1.5em; }
+
+#about {
+  padding-top: 60px;
+  min-height: 100%; }
+  #about .view-work {
+    font-size: 0.9em;
+    margin-top: 1.25em; }
+  #about .about-caption {
+    color: #ccc; }
+  #about .about-image {
+    margin-top: 1.4em; }
+  #about .about-panel {
+    padding-bottom: 7%; }
+  #about .about-resume {
+    margin-top: 1.45em;
+    margin-right: 1em;
+    background: #000;
+    border: 1px solid #222; }
+  #about a.about-resume:hover {
+    color: #008ED3;
+    border-color: #1a1a1a; }
+
+.last-paragraph {
+  margin-bottom: 1.25em; }
+
+h3 {
+  margin-bottom: 3%; }
+
+ul.skills, ul.about-details {
+  padding: 0;
+  margin: 0; }
+
+ul.skills li, ul.about-details li {
+  list-style: none;
+  font-size: 95%; }
+
+ul.skills li {
+  padding: 5px 0; }
+
+ul.about-details li {
+  padding: 2px 0; }
+
+p.indent {
+  text-indent: 1em; }
+
+#portfolio {
+  padding-top: 60px;
+  min-height: 100%; }
+  #portfolio ul.portnav {
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+    #portfolio ul.portnav li {
+      list-style-type: none;
+      float: left; }
+  #portfolio h2.project-title {
+    margin-bottom: 0.75em; }
+  #portfolio h3.project-detail {
+    margin-top: 4px; }
+  #portfolio h2.project-title a,
+  #portfolio h2.project-title a:active,
+  #portfolio h2.project-title a:visited {
+    color: #fff; }
+  #portfolio h2.project-title a:hover {
+    color: #008ED3; }
+  #portfolio .project {
+    padding-bottom: 2.5em; }
+
+.dark-panel, .thumbnail.dark-panel {
+  background-color: rgba(0, 0, 0, 0.65);
+  border: none; }
+
+.info-button:active {
+  background-color: #2aabd2;
+  border-color: #2aabd2; }
+
+.info-button {
+  margin-left: 8px;
+  margin-top: 8px;
+  background-image: linear-gradient(to bottom, #2aabd2 0px, #008ED3 100%);
+  background-repeat: repeat-x;
+  background-color: #000;
+  border-color: #008ED3;
+  color: #fff;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2); }
+
+.filter {
+  padding-top: 25px; }
+
+#contact {
+  padding-top: 60px;
+  min-height: 100%; }
+  #contact .contact-button {
+    margin-left: 0px; }
+  #contact hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #008ed3, rgba(255, 255, 255, 0));
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #008ed3, rgba(255, 255, 255, 0));
+    background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #008ed3, rgba(255, 255, 255, 0));
+    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #008ed3, rgba(255, 255, 255, 0)); }
+  #contact .vcard.contact {
+    margin-bottom: 15%; }
+  #contact .social-media {
+    margin-top: 10%;
+    margin-bottom: 80%;
+    text-align: justify; }
+  #contact .social-media a {
+    display: inline-block; }
+  #contact .social-media:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0; }
+  #contact .social-media a img {
+    width: 48px;
+    height: 48px; }
+  #contact .contact-panel {
+    border: none;
+    box-shadow: none;
+    padding: 10px; }
+  #contact .contact-errors {
+    display: none; }
+  #contact .contact-form-error {
+    border: 2px solid red; }
+
+#footer {
+  background-color: #000;
+  padding: 1em; }
+
+.white {
+  color: #FFF; }
+
+span.blue {
+  color: #008ED3; }
+
+.inline {
+  display: inline-block; }
+
+.inner-panel {
+  background-color: rgba(0, 0, 0, 0.75); }
+
+/*About page media query*/
+@media (max-width: 767px) {
+  .about-image {
+    display: none; }
+
+  #portfolio h2.project-title {
+    text-align: center; }
+  #portfolio .project-details {
+    text-align: center; }
+
+  #contact {
+    text-align: center; }
+    #contact .contact-panel {
+      margin-top: 1em; }
+      #contact .contact-panel .vcard.contact {
+        margin-bottom: 5%; }
+      #contact .contact-panel .social-media {
+        margin-top: 5%;
+        margin-bottom: 0;
+        text-align: center; }
+      #contact .contact-panel .social-media:after {
+        content: none; }
+
+  ul.skills li, .skills-head {
+    text-align: center; } }
+@media (min-width: 561px) {
+  h1.home-head {
+    font-size: 6.0em;
+    max-width: 780px; } }
+@media (min-width: 381px) and (max-width: 560px) {
+  h1.home-head {
+    margin-top: 10%;
+    font-size: 4.2em; } }
+@media (max-width: 380px) {
+  h1.home-head {
+    font-size: 2.8em; } }
+/*Bootstrap Overrides*/
+.thumbnail {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0; }
+
+nav.navbar-inverse {
+  background-image: none;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.9); }
+
+.navbar-inverse .navbar-nav > .active,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background-image: none;
+  background-color: #1a1a1a; }
+
+ul.dropdown-menu {
+  background-color: #080808; }
+  ul.dropdown-menu li > a {
+    color: #fff; }
+  ul.dropdown-menu li > a:hover, ul.dropdown-menu .dropdown-menu li > a:focus, ul.dropdown-menu .dropdown-submenu:hover > a {
+    background-image: none;
+    background-color: #222;
+    color: #eee; }
+  ul.dropdown-menu ul.work-menu.dropdown-menu .active a {
+    background-color: #008ED3; }
+
+* {
+  border-radius: 0 !important; }
+
+/*# sourceMappingURL=main.css.map */

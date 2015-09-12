@@ -119,7 +119,3 @@ $('.filter-personal').click(function(e)
     $('.professional').hide();
 });
 
-$(function()
-{
-    $('.filter-professional').click();
-});

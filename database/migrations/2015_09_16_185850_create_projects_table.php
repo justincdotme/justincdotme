@@ -17,7 +17,7 @@ class CreateProjectsTable extends Migration
         {
             $table->increments('id');
             $table->integer('category');
-            $table->foreign('category')->references('id')->on('categories');
+            $table->foreign('category')->references('id')->on('project_categories');
             //Project Images are loaded via Eloquent relationship
             //Skills are loaded via Eloquent relationship
             $table->string('name');

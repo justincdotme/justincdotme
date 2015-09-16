@@ -13,7 +13,16 @@ class CreateProjectImagesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('project_images', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->integer('project');
+            $table->foreign('project')->references('id')->on('projects');
+            $table->string('full_path');
+            $table->string('thumb_path');
+            $table->string('alt_text');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class CreateProjectImagesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('project_images');
     }
 }

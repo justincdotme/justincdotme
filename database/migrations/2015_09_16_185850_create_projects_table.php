@@ -16,8 +16,8 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('category');
-            $table->foreign('category')->references('id')->on('project_categories');
+            $table->integer('cat')->unsigned();
+            $table->foreign('cat')->references('id')->on('project_categories');
             //Project Images are loaded via Eloquent relationship
             //Skills are loaded via Eloquent relationship
             $table->string('name');

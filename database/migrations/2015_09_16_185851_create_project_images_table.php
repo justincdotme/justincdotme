@@ -16,7 +16,7 @@ class CreateProjectImagesTable extends Migration
         Schema::create('project_images', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('project');
+            $table->integer('project')->unsigned();
             $table->foreign('project')->references('id')->on('projects');
             $table->string('full_path');
             $table->string('thumb_path');

@@ -20,7 +20,7 @@ class CreateProjectImagesTable extends Migration
             $table->foreign('project')->references('id')->on('projects');
             $table->string('full_path');
             $table->string('thumb_path');
-            $table->string('alt_text');
+            $table->string('alt_text')->nullable();
             $table->timestamps();
         });
     }

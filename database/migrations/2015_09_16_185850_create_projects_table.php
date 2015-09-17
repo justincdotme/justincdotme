@@ -19,9 +19,10 @@ class CreateProjectsTable extends Migration
             $table->integer('cat')->unsigned();
             $table->foreign('cat')->references('id')->on('project_categories');
             //Project Images are loaded via Eloquent relationship
-            //Skills are loaded via Eloquent relationship
+            //Skills are loaded via n-n Eloquent relationship + pivot table
             $table->string('name');
             $table->string('live_url')->nullable();
+            $table->string('admin_url')->nullable();
             $table->string('github_url')->nullable();
             $table->text('case_study');
             $table->text('testimonial')->nullable();

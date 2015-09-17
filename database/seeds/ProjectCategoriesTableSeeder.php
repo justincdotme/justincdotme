@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ProjectCategoriesTableSeeder extends Seeder
 {
@@ -11,6 +12,12 @@ class ProjectCategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('project_categories')->insert([
+            'category' => 'professional'
+        ]);
+
+        DB::table('project_categories')->insert([
+            'category' => 'personal'
+        ]);
     }
 }

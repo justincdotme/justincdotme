@@ -13,7 +13,17 @@ class CreateProjectSkillTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('project_skill', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('project_id')->unsigned();
+            $table->foreign('project_id')
+                ->references('id')
+                ->on('projects');
+            $table->integer('skill_id')->unsigned();
+            $table->foreign('skill_id')
+                ->references('id')
+                ->on('skills');
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class CreateProjectSkillTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('project_skill');
     }
 }

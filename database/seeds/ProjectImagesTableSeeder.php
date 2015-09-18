@@ -13,56 +13,56 @@ class ProjectImagesTableSeeder extends Seeder
     public function run()
     {
         DB::table('project_images')->insert([
-            'project'       => 1,
+            'project_id'    => 1,
             'full_path'     => '/images/portfolio/xxxxxx-full.png',
             'thumb_path'    => '/images/portfolio/xxxxxx-thumb.png',
             'alt_text'      => null
         ]);
 
         DB::table('project_images')->insert([
-            'project'       => 2,
+            'project_id'    => 2,
             'full_path'     => '/images/portfolio/xxxxxx-full.png',
             'thumb_path'    => '/images/portfolio/xxxxxx-thumb.png',
             'alt_text'      => null
         ]);
 
         DB::table('project_images')->insert([
-            'project'       => 3,
+            'project_id'    => 3,
             'full_path'     => '/images/portfolio/xxxxxx-full.png',
             'thumb_path'    => '/images/portfolio/xxxxxx-thumb.png',
             'alt_text'      => null
         ]);
 
         DB::table('project_images')->insert([
-            'project'       => 4,
+            'project_id'    => 4,
             'full_path'     => '/images/portfolio/xxxxxx-full.png',
             'thumb_path'    => '/images/portfolio/xxxxxx-thumb.png',
             'alt_text'      => null
         ]);
 
         DB::table('project_images')->insert([
-            'project'       => 5,
+            'project_id'    => 5,
             'full_path'     => '/images/portfolio/xxxxxx-full.png',
             'thumb_path'    => '/images/portfolio/xxxxxx-thumb.png',
             'alt_text'      => null
         ]);
 
         DB::table('project_images')->insert([
-            'project'       => 6,
+            'project_id'    => 6,
             'full_path'     => '/images/portfolio/xxxxxx-full.png',
             'thumb_path'    => '/images/portfolio/xxxxxx-thumb.png',
             'alt_text'      => null
         ]);
 
         DB::table('project_images')->insert([
-            'project'       => 7,
+            'project_id'    => 7,
             'full_path'     => '/images/portfolio/xxxxxx-full.png',
             'thumb_path'    => '/images/portfolio/xxxxxx-thumb.png',
             'alt_text'      => null
         ]);
 
         DB::table('project_images')->insert([
-            'project'       => 8,
+            'project_id'    => 8,
             'full_path'     => '/images/portfolio/xxxxxx-full.png',
             'thumb_path'    => '/images/portfolio/xxxxxx-thumb.png',
             'alt_text'      => null

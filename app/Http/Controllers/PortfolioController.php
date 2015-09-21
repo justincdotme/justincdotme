@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Transformers\PageTransformer;
+use App\Models\Page;
+use Exception;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -9,6 +12,14 @@ use App\Http\Controllers\Controller;
 
 class PortfolioController extends Controller
 {
+    //Page name in Page model.
+    protected $page;
+
+    public function __construct()
+    {
+        $this->page = 'portfolio';
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,17 +27,16 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        //
-    }
+        try {
+            $page = Page::getPageData($this->page)->firstOrFail();
+        } catch(Exception $e) {
+            return $this->response->errorNotFound();
+        }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
+        return $this->response()
+            ->item($page, new PageTransformer())
+            ->addMeta('status', 'success')
+            ->setStatusCode(200);
     }
 
     /**
@@ -47,17 +57,6 @@ class PortfolioController extends Controller
      * @return Response
      */
     public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit($id)
     {
         //
     }

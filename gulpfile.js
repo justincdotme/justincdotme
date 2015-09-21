@@ -17,4 +17,7 @@ elixir(function(mix) {
         '/bower/bootstrap/dist/js/bootstrap.js',
         '/bower/angular/angular.js'
     ], 'public/js/vendor.js');
+    mix.sass([
+        'main.scss'
+    ], 'public/css/main.css');
 });

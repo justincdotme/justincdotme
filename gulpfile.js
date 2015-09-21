@@ -15,8 +15,9 @@ elixir(function(mix) {
     mix.scripts([
         '/bower/jquery/dist/jquery.js',
         '/bower/bootstrap/dist/js/bootstrap.js',
-        '/bower/angular/angular.js'
-    ], 'public/js/vendor.js');
+        '/bower/angular/angular.js',
+        '/justin/main.js'
+    ], 'public/js/scripts.js');
 
     mix.sass([
         'main.scss'
@@ -24,6 +25,6 @@ elixir(function(mix) {
 
     mix.version([
         'public/css/main.css',
-        'public/js/vendor.js'
+        'public/js/scripts.js'
     ]);
 });

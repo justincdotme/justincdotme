@@ -36,8 +36,7 @@
 <![endif]-->
 <h1>home page</h1>
 
-<script src="{{ elixir('js/vendor.js') }}"></script>
-<script src="/js/main.js"></script>
+<script src="{{ elixir('js/scripts.js') }}"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

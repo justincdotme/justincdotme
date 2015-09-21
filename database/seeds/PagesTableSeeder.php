@@ -27,7 +27,7 @@ class PagesTableSeeder extends Seeder
         ]);
 
         DB::table('pages')->insert([
-            'name'          => 'bio',
+            'name'          => 'about',
             'title'         => 'Justin Christenson - Web Developer - Bio',
             'description'   => 'The biography of Justin Christenson, Web Developer',
             'keywords'      => 'web developer, php, laravel, developer, mysql, database, javascript, html, css, portland, vancouver',

@@ -27,7 +27,7 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway+Dots|Open+Sans' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ elixir('css/main.css') }}">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
@@ -36,7 +36,7 @@
 <![endif]-->
 <h1>home page</h1>
 
-<script src="{{ asset('/js/vendor.js') }}"></script>
+<script src="{{ elixir('js/vendor.js') }}"></script>
 <script src="/js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

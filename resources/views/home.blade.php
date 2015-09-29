@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>{{ $title or 'Justin Christenson is a web Developer in Vancouver, WA.' }}</title>
     <link rel="canonical" href="http://justinc.me"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
@@ -51,14 +51,603 @@
     <link rel="stylesheet" href="{{ elixir('css/main.css') }}">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#main-navigation">
 <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
+<!-- Begin Main Nav-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand scroll" href="#home"><span class="blue">justinc.me</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#home" class="scroll">Home <span class="sr-only"></span></a>
+                </li>
+                <li>
+                    <a href="#about" class="scroll">About <span class="sr-only"></span></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Work <span class="caret"></span></a>
+                    <ul class="dropdown-menu work-menu" role="menu">
+                        <li>
+                            <a href="#portfolio" class="scroll">Portfolio</a>
+                        </li>
+                        <li>
+                            <a target="_BLANK" href="https://github.com/justincdotme">Github</a>
+                        </li>
+                        <li>
+                            <a href="/justin-christenson-resume.pdf" target="_BLANK">Resume</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#contact" class="scroll">Contact</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/justin-christenson-resume.pdf" target="_BLANK">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Main Nav -->
 <!-- Begin Body-->
+<!-- Begin Home page -->
+<section id="home" data-type="background" data-speed="10" class="pages">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <noscript>&lt;h1 class="js-error"&gt;JavaScript is required to view this page!&lt;/h1&gt;</noscript>
+                <h1 class="home-head white">Justin Christenson is a Web Developer in Vancouver, WA.</h1>
+                <a class="scroll btn info-button btn-lg" href="#about" id="learn-more"><span class="glyphicon glyphicon-arrow-down"></span> Learn More <span class="glyphicon glyphicon-arrow-down"></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Home Page -->
 
+<!-- Begin About Page -->
+<section id="about" data-type="background" data-speed="10" class="pages">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>About</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel dark-panel panel-default about-panel">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-3 about-image">
+                                <div class="thumbnail dark-panel">
+                                    <img class="deferred" data-src="/img/jc-1.jpg" src="/img/jc-1.jpg">
+                                    <div class="caption about-caption">
+                                        <ul class="about-details">
+                                            <li><strong>Phone</strong>: <a href="tel:+16053817180">605-381-7180</a></li>
+                                            <li><strong>Email</strong>: <a href="mailto:info@justinc.me">info@justinc.me</a></li>
+                                            <li><strong>GitHub</strong>: <a target="_BLANK" href="https://github.com/justincdotme">justincdotme</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h3 class="inline">Hello World,</h3>
+                                <a target="_BLANK" href="/justin-christenson-resume.pdf" class="white inline pull-right about-resume btn-inverse btn-sm btn"><span class="glyphicon glyphicon-download"></span> View Resume</a>
+                                <p class="indent">I'm a web developer, open source enthusiast and Jedi Apprentice living in beautiful Vancouver, WA. I started my career as a front end developer after earning a degree in Web Design and Interactive Media in 2011.</p>
+                                <p class="indent">I worked as a front end developer after graduation but soon realized that I have an even greater love for writing server side code. At this point, I began teaching myself back end development on a LAMP stack in my free time while continuing to work primarily as a front end developer.</p>
+                                <p class="indent">I currently work as a freelance web developer creating applications using PHP and MySQL. I also enjoy using the Laravel framework on larger projects.</p>
+                                <p class="indent last-paragraph">While I have your attention, check out my <a target="_BLANK" href="https://github.com/justincdotme">GitHub</a> profile or view some of my <a href="#portfolio" class="scroll">work</a>. Also, feel free to <a href="#contact" class="scroll">drop me a line</a>.</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <h3 class="skills-head">Skill Set</h3>
+                                <ul class="skills">
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> SQL (MySQL &amp; PostgreSQL)
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Laravel
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> WordPress
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Git
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> LEMP / LAMP Administration
+                                    </li>
+                                </ul>
+                                <h3 class="skills-head">Experience With</h3>
+                                <ul class="skills">
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> MVC Architecture
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> REST APIs
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> DNS Administration
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Mail Server Administration
+                                    </li>
+                                    <li class="skill">
+                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Lightsaber Construction
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p class="text-center"><a class="scroll btn info-button btn-lg view-work" href="#portfolio"><span class="glyphicon glyphicon-arrow-down"></span> View Work <span class="glyphicon glyphicon-arrow-down"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Page -->
 
-
+<!-- Begin Portfolio Page -->
+<section id="portfolio" data-type="background" data-speed="10" class="pages">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Portfolio</h1>
+            <nav class="text-center dark-panel">
+                <ul class="portnav">
+                    <li><a href="#" class="filter-professional">Professional Projects</a> | </li>
+                    <li><a href="#" class="filter-personal">Personal Projects</a></li>
+                </ul>
+            </nav>
+            <br>
+            <div class="panel dark-panel panel-default project professional">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="project-title"><a target="_BLANK" href="http://fawkesfx.com">FawkesFX</a></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="thumbnail">
+                                <a target="_BLANK" href="http://fawkesfx.com">
+                                    <img class="deferred" alt="FawkesFX Website Screenshot" data-src="/img/portfolio/fawkesfx-shot.jpg" src="/img/portfolio/fawkesfx-shot.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 project-details">
+                            <h3 class="project-detail">Details</h3>
+                            <p class="indent">Fawkes FX is a small creative firm located in Portland, OR that I helped establish. We required a public website to showcase our services. The website also reuired a private administration interface with transactional email integration.</p>
+                            <p class="indent last-paragraph">The front end team at FawkesFX designed and built the public website, which I merged into a Laravel 4 application. I then designed and developed the administration interface featuring several custom modules including a user management module, an SEO module and a leads management module.</p>
+                        </div>
+                        <div class="col-sm-3 skill-col">
+                            <h3 class="skills-head project-detail">Skills Used</h3>
+                            <ul class="skills">
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Laravel 4
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> MySQL
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Web Server Administration
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="text-center">
+                                <a class="btn info-button" target="_BLANK" href="http://fawkesfx.com"><span class="glyphicon glyphicon-link"></span> Website</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel dark-panel panel-default project professional">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="project-title"><a target="_BLANK" href="http://reliablemobilelabs.com">Reliable Mobile Labs</a></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="thumbnail">
+                                <a target="_BLANK" href="http://reliablemobilelabs.com">
+                                    <img class="deferred" alt="Reliable Mobile Labs Website Screenshot" data-src="/img/portfolio/reliableMobileLabs-shot.jpg" src="/img/portfolio/reliableMobileLabs-shot.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 project-details">
+                            <h3 class="project-detail">Details</h3>
+                            <p class="indent">Reliable Mobile Labs is a medical lab testing service with locations in several states. The client required a website to showcase their services, generate leads and allow physicians to log into a portal within the website.</p>
+                            <p class="indent last-paragraph">The team at FawkesFX put together the design and concept for this project. I assisted the front end team with client side development using JavaScript, some HTML and CSS. I then created a lead management system using PHP and capped it off with a router to allow for search engine friendly URLs.</p>
+                        </div>
+                        <div class="col-sm-3 skill-col">
+                            <h3 class="skills-head project-detail">Skills Used</h3>
+                            <ul class="skills">
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="text-center">
+                                <a class="btn info-button" target="_BLANK" href="http://reliablemobilelabs.com"><span class="glyphicon glyphicon-link"></span> Website</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel dark-panel panel-default project professional">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="project-title"><a target="_BLANK" href="http://www.belssage.com">Belssage</a></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="thumbnail">
+                                <a target="_BLANK" href="http://www.belssage.com">
+                                    <img class="deferred" alt="Belssage Massage Therapy Website Screenshot" data-src="/img/portfolio/belssage-shot.jpg" src="/img/portfolio/belssage-shot.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 project-details">
+                            <h3 class="project-detail">Details</h3>
+                            <p class="indent">Belssage is a massage therapy provider in Rapid City, SD. This project required a contact form for appointment scheduling, publishing of a quarterly newsletter, easy page updates and a list &amp; description of provided services.</p>
+                            <p class="indent last-paragraph">I designed the website using Photoshop and built the WordPress theme using HTML, CSS, PHP and JavaScript.</p>
+                        </div>
+                        <div class="col-sm-3 skill-col">
+                            <h3 class="skills-head project-detail">Skills Used</h3>
+                            <ul class="skills">
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Wordpress Theme Development
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS (SCSS)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="text-center">
+                                <a class="btn info-button" target="_BLANK" href="http://www.belssage.com"><span class="glyphicon glyphicon-link"></span> Website</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel dark-panel panel-default project personal">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="project-title"><a target="_BLANK" href="http://bookme.demos.justinc.me">bookMe</a></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="thumbnail">
+                                <a target="_BLANK" href="http://bookme.demos.justinc.me">
+                                    <img class="deferred" alt="bookMe Website Screenshot" data-src="/img/portfolio/bookme-shot.jpg" src="/img/portfolio/bookme-shot.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 project-details">
+                            <h3 class="project-detail">Details</h3>
+                            <p class="indent">bookMe is a personal project that I built in my free time using PHP5 and MySQL. The goal of this project was to create a fully functional property booking application from scratch using MVC architecture.</p>
+                            <p class="indent last-paragraph">The public site features property listings, a property availability module and a reservation booking module. The administrative interface features a user management module, a reservation management module and a property management module. The property management module comes complete with a rich text editor and image uploader.</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <h3 class="skills-head project-detail">Skills Used</h3>
+                            <ul class="skills">
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> MySQL
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> ORM (Eloquent)
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS (SCSS)
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> API Consumption
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="text-center">
+                                <a class="btn info-button" target="_BLANK" href="http://bookme.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
+                                <a class="btn info-button" target="_BLANK" href="http://bookme.demos.justinc.me/admin"><span class="glyphicon glyphicon-link"></span> Demo Admin Interface</a>
+                                <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/bookme"><img height="16" src="/img/ico/github-official-32-white.png"> GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel dark-panel panel-default project personal">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="project-title"><a target="_BLANK" href="http://foocart.demos.justinc.me">fooCart</a></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="thumbnail">
+                                <a target="_BLANK" href="http://foocart.demos.justinc.me">
+                                    <img class="deferred" alt="fooCart Website Screenshot" data-src="/img/portfolio/foocart-shot.jpg" src="/img/portfolio/foocart-shot.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 project-details">
+                            <h3 class="project-detail">Details</h3>
+                            <p class="indent">fooCart is a personal project that I built in my free time using Laravel 5. The primary goal was to develop an e-commerce application with shopping cart, inventory management and payment processing integration.</p>
+                            <p class="indent last-paragraph">The public site features a JavaScript based inventory display module that uses the Handlebars JS library for client side templating. The public site also features a checkout module with on-site input of payment information. The administration interface features an inventory management module, user management module, slideshow management module and message management module.</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <h3 class="skills-head project-detail">Skills Used</h3>
+                            <ul class="skills">
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Laravel 5
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> MySQL
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> ORM (Eloquent)
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS (SCSS)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="text-center">
+                                <a class="btn info-button" target="_BLANK" href="http://foocart.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
+                                <a class="btn info-button" target="_BLANK" href="http://foocart.demos.justinc.me/admin"><span class="glyphicon glyphicon-link"></span> Demo Admin Interface</a>
+                                <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/foocart"><img height="16" src="/img/ico/github-official-32-white.png"> GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel dark-panel panel-default project personal">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="project-title"><a target="_BLANK" href="http://findmyisp.demos.justinc.me">FindMyISP</a></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="thumbnail">
+                                <a target="_BLANK" href="http://findmyisp.demos.justinc.me">
+                                    <img class="deferred" alt="FindMyISP Website Screenshot" data-src="/img/portfolio/findmyisp-shot.jpg" src="/img/portfolio/findmyisp-shot.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 project-details">
+                            <h3 class="project-detail">Details</h3>
+                            <p class="indent">FindMyISP is a personal project that I built in my free time. The primary goals of this project were to inform a user of who their current ISP is and display other ISP options in the user's area.</p>
+                            <p class="indent last-paragraph">The application utilizes the HTML5 Geolocation API to get the user's current location and then uses the IpInfo API to obtain the users ISP. The IpInfo API is also used as a geolocation fallback, should the user's browser not support geolocation. The application then uses the Google Places Web Services API to determine nearby ISPs.</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <h3 class="skills-head project-detail">Skills Used</h3>
+                            <ul class="skills">
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS (SCSS)
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> API Consumption
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="text-center">
+                                <a class="btn info-button" target="_BLANK" href="http://findmyisp.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
+                                <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/findmyisp"><img height="16" src="/img/ico/github-official-32-white.png"> GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel dark-panel panel-default project personal">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="project-title"><a target="_BLANK" href="http://tweetme.demos.justinc.me">TweetMe</a></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="thumbnail">
+                                <a target="_BLANK" href="http://tweetme.demos.justinc.me">
+                                    <img class="deferred" alt="TweetMe Website Screenshot" data-src="/img/portfolio/tweetme-shot.jpg" src="/img/portfolio/tweetme-shot.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 project-details">
+                            <h3 class="project-detail">Details</h3>
+                            <p class="indent">TweetMe is a Twitter feed application that I developed in my free time. The primary goal of this project was to create an application to pull in a controllable number of statuses from a Twitter user's public timeline.</p>
+                            <p class="indent last-paragraph">This application retrieves the statuses via the Twitter REST API, then caches the JSON responses to a flat file 15 minutes to avoid the Twitter API rate limits. Next, TweetMe repackages the cached JSON response to filter out unneeded properties and then outputs the repackaged timeline in either JSON or formatted HTML.</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <h3 class="skills-head project-detail">Skills Used</h3>
+                            <ul class="skills">
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS (SCSS)
+                                </li>
+                                <li class="project-skill">
+                                    <span class="glyphicon glyphicon-chevron-right blue"></span> API Consumption
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="text-center">
+                                <a class="btn info-button" target="_BLANK" href="http://tweetme.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
+                                <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/tweetme"><img height="16" src="/img/ico/github-official-32-white.png"> GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Portfolio Page -->
+<!-- Begin Contact Page -->
+<section id="contact" data-type="background" data-speed="10" class="pages">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel dark-panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="panel panel-default contact-panel inner-panel">
+                                <div class="panel-body">
+                                    <div class="vcard contact">
+                                        <h4 class="tel">Phone: <a href="tel:+16053817180">605-381-7180</a></h4>
+                                        <h4 class="email">Email: <a href="mailto:info@justinc.me" class="email">info@justinc.me</a></h4>
+                                        <h4 class="skype">Skype: <a href="skype:justinc.me?chat" class="skype">justinc.me</a></h4>
+                                    </div>
+                                    <hr>
+                                    <div class="social-media">
+                                        <a target="_BLANK" href="https://twitter.com/justincdotme">
+                                            <img data-src="/img/ico/twitter-64.jpg" src="/img/ico/twitter-64.jpg" class="deferred">
+                                        </a>
+                                        <a target="_BLANK" href="https://plus.google.com/115474380698631066615/posts">
+                                            <img data-src="/img/ico/google-plus-64.jpg" src="/img/ico/google-plus-64.jpg" class="deferred">
+                                        </a>
+                                        <a target="_BLANK" href="https://www.linkedin.com/pub/justin-christenson/1a/175/ab2">
+                                            <img data-src="/img/ico/linkedin-64.jpg" src="/img/ico/linkedin-64.jpg" class="deferred">
+                                        </a>
+                                        <a target="_BLANK" href="https://github.com/justincdotme">
+                                            <img data-src="/img/ico/github-64.png" src="/img/ico/github-64.png" class="deferred">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="row contact-errors">
+                                <div class="col-sm-12">
+                                    <div class="alert alert-danger">
+                                        <h1>Error</h1>
+                                        <ul class="messages">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="/contact" id="contact-form" method="POST">
+                                <input type="hidden" value="UwLmBxEm8ll8V2hBagIF6tiYGZWfRCs4mMTBCYcf" name="_token">
+                                <div class="form-group">
+                                    <label for="name">Name</label><br>
+                                    <input type="text" required="" value="" name="name" class="form-control required" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: right center;">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label><br>
+                                    <input type="email" required="" value="" name="email" class="form-control required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label><br>
+                                    <input type="text" value="" maxlength="12" name="phone" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label><br>
+                                    <textarea required="" rows="10" class="form-control required" name="message"></textarea>
+                                </div>
+                                <button class="btn info-button contact-button btn-lg" type="submit">Contact</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact Page -->
 <!-- End Body-->
 <script src="{{ elixir('js/scripts.js') }}"></script>
 

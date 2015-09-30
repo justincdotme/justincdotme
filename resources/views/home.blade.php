@@ -107,13 +107,18 @@
     <h1 class="js-error">JavaScript is required to view this page!</h1>
 </noscript>
 <!-- Begin Home page -->
-<section id="home" data-type="background" data-speed="10" class="pages">
+<section id="home" data-type="background" data-speed="5" class="pages">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 text-center">
-                <h1 class="home-head white">Justin Christenson is a Web Developer in Vancouver, WA.</h1>
-                <a class="scroll btn info-button btn-lg" href="#about" id="learn-more"><span class="glyphicon glyphicon-arrow-down"></span> Learn More <span class="glyphicon glyphicon-arrow-down"></span></a>
+            <div class="col-sm-12 text-center head-container">
+                <h1 class="home-head white"><span>Justin Christenson is a&nbsp;<br/>&nbsp;Web Developer&nbsp;<br/>&nbsp;in Vancouver, WA.</span></h1>
             </div>
+            <a href="#about" id="scroll-down" class="scroll">
+                <div class="arrow bounce">
+
+                </div>
+            </a>
+
         </div>
     </div>
 </section>
@@ -218,7 +223,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1>Portfolio</h1>
+                <h1 class="white">Portfolio</h1>
                 <div class="panel dark-panel panel-default project professional">
                     <div class="panel-body">
                         <div class="row">
@@ -580,6 +585,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
+                <h1 class="white">Contact</h1>
                 <div class="panel dark-panel panel-default">
                     <div class="panel-body">
                         <div class="row">

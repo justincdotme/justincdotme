@@ -16,6 +16,7 @@ elixir(function(mix) {
         '/bower/jquery/dist/jquery.js',
         '/bower/bootstrap/dist/js/bootstrap.js',
         '/bower/angular/angular.js',
+        '/bower/jquery-easing-original/jquery.easing.js',
         '/justin/main.js'
     ], 'public/js/scripts.js');
 

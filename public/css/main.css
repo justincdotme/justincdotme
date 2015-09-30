@@ -1,4 +1,51 @@
 body {
-  background-color: #000; }
+  margin: 0; }
+
+#home {
+  background: url("/img/background.jpg") 50% 0 repeat fixed;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative; }
+
+#about {
+  background: #fefefe;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
+
+#portfolio {
+  background: url("/img/bg_1.jpg") 50% 0 repeat fixed;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
+
+#contact {
+  background: #000;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
+
+#home h1.home-head {
+  font-family: "Raleway Dots",cursive;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18%; }
+
+h1.home-head {
+  font-size: 6em;
+  max-width: 780px; }
+
+.white {
+  color: #fff; }
+
+section {
+  padding-top: 50px !important; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $window = $(window);
 
-    //Set pages min-height to 100% window height
+    //Set page's min-height to 100% window height
     winHeight = $window.height();
     $('.pages').each(function()
     {

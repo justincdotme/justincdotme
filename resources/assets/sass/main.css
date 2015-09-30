@@ -1,5 +1,5 @@
 body {
-  padding: 50px 0 0 0; }
+  margin: 0; }
 
 #home {
   background: url("/img/background.jpg") 50% 0 repeat fixed;
@@ -8,60 +8,32 @@ body {
   max-width: 1920px;
   position: relative; }
 
-#home article {
-  height: 458px;
-  position: absolute;
-  text-align: center;
-  top: 150px;
-  width: 100%; }
-
 #about {
-  background: #fefefe 50% 0 repeat fixed;
+  background: #fefefe;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
   position: relative;
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
-
-#about article {
-  height: 458px;
-  position: absolute;
-  text-align: center;
-  top: 150px;
-  width: 100%; }
 
 #portfolio {
-  background: #333 50% 0 repeat fixed;
+  background: url("/img/bg_1.jpg") 50% 0 repeat fixed;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
   position: relative;
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
-
-#portfolio article {
-  height: 458px;
-  position: absolute;
-  text-align: center;
-  top: 150px;
-  width: 100%; }
 
 #contact {
-  background: url("/img/background.jpg") 50% 0 repeat fixed;
+  background: #000;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
   position: relative;
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
-
-#contact article {
-  height: 458px;
-  position: absolute;
-  text-align: center;
-  top: 150px;
-  width: 100%; }
 
 #home h1.home-head {
   font-family: "Raleway Dots",cursive;
@@ -75,5 +47,8 @@ h1.home-head {
 
 .white {
   color: #fff; }
+
+section {
+  padding-top: 50px !important; }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,6 +2,7 @@
 /node_modules
 .env
 /.idea
-composer.lock
 /public/justin-christenson-resume.pdf
-/resources/assets/js
+/public/js/scripts.js
+/public/js/scripts.js.map
+/public/build

@@ -14,6 +14,7 @@ body {
   width: 100%;
   max-width: 1920px;
   position: relative;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
 
 #portfolio {
@@ -22,6 +23,7 @@ body {
   width: 100%;
   max-width: 1920px;
   position: relative;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
 
 #contact {
@@ -30,6 +32,7 @@ body {
   width: 100%;
   max-width: 1920px;
   position: relative;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
 
 #home h1.home-head {

@@ -113,7 +113,7 @@
             <div class="col-sm-12 text-center head-container">
                 <h1 class="home-head white"><span>Justin Christenson is a <br/>Web Developer <br/>in Vancouver, WA.</span></h1>
             </div>
-            <a href="#about">
+            <a href="#about" id="scroll-down" class="scroll">
                 <div class="arrow bounce">
 
                 </div>

@@ -111,7 +111,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center head-container">
-                <h1 class="home-head white"><span>Justin Christenson is a <br/>Web Developer <br/>in Vancouver, WA.</span></h1>
+                <h1 class="home-head white"><span>Justin Christenson is a&nbsp;<br/>&nbsp;Web Developer&nbsp;<br/>&nbsp;in Vancouver, WA.</span></h1>
             </div>
             <a href="#about" id="scroll-down" class="scroll">
                 <div class="arrow bounce">
@@ -223,7 +223,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1>Portfolio</h1>
+                <h1 class="white">Portfolio</h1>
                 <div class="panel dark-panel panel-default project professional">
                     <div class="panel-body">
                         <div class="row">

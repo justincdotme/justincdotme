@@ -2,20 +2,18 @@ body {
   margin: 0; }
 
 #home {
-  background: url("/img/pdx_bg_1.jpg") 50% 0 repeat fixed;
+  background: url("/img/background.jpg") 50% 0 repeat fixed;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
   position: relative; }
 
 #about {
-  background: #fefefe;
+  background: url("/img/concrete_seamless.png") 50% 0 repeat fixed;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
-  position: relative;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
+  position: relative; }
 
 #portfolio {
   background: url("/img/pdx_bg_1.jpg") 50% 0 repeat fixed;
@@ -27,13 +25,11 @@ body {
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
 
 #contact {
-  background: url("/img/dark_embroidery.png") 50% 0 repeat fixed;
+  background: url("/img/concrete_seamless.png") 50% 0 repeat fixed;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
-  position: relative;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); }
+  position: relative; }
 
 #home .head-container {
   margin-top: 15%; }
@@ -41,7 +37,7 @@ body {
 h1.home-head {
   font-family: "Raleway Dots",cursive;
   font-size: 6.25em;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   line-height: 1.2em;
   display: inline; }
 
@@ -56,6 +52,11 @@ section.pages {
 
 div.contact-errors {
   display: none; }
+
+nav.navbar-inverse {
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 0 none; }
 
 /*Scroll Down Animation*/
 @-moz-keyframes bounce {

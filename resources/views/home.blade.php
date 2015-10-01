@@ -115,10 +115,16 @@
             </div>
             <a href="#about" id="scroll-down" class="scroll">
                 <div class="arrow bounce">
-
+                    <!--
+                        What shall we use
+                        To fill the empty spaces
+                        Where we used to talk?
+                        How shall I fill
+                        The final places?
+                        How should I complete the wall
+                     -->
                 </div>
             </a>
-
         </div>
     </div>
 </section>
@@ -224,6 +230,10 @@
         <div class="row">
             <div class="col-sm-12">
                 <h1 class="white">Portfolio</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
                 <div class="panel dark-panel panel-default project professional">
                     <div class="panel-body">
                         <div class="row">
@@ -585,7 +595,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="white">Contact</h1>
+                <h1>Contact</h1>
                 <div class="panel dark-panel panel-default">
                     <div class="panel-body">
                         <div class="row">

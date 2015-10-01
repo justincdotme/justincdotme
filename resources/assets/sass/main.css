@@ -2,6 +2,9 @@ body {
   margin: 0;
   color: #222; }
 
+h1, h2, h3, h4, h5 {
+  font-family: "Open Sans","Helvetica Neue",Arial,sans-serif; }
+
 #home {
   background: url("/img/pdx_bg_dark_1.jpg") 50% 0 repeat fixed;
   margin: 0 auto;
@@ -10,11 +13,31 @@ body {
   position: relative; }
 
 #about {
+  font-size: 1.125em;
   background: #f05f40;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
   position: relative; }
+  #about #bio-image {
+    background: url("/img/justin-headshot-250.jpg") no-repeat;
+    border: 6px solid white; }
+  #about #skillset {
+    background: #fff; }
+  #about #bio {
+    padding: 2em 0 4em 0; }
+  #about #skillset {
+    padding: 2em 0; }
+  #about ul.skills {
+    list-style-type: none;
+    padding-left: 20px;
+    width: 200px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    margin: 0 auto;
+    text-align: left; }
 
 #portfolio {
   background: url("/img/pdx_bg_dark_1.jpg") 50% 0 repeat fixed;
@@ -24,7 +47,7 @@ body {
   position: relative; }
 
 #contact {
-  background: url("/img/concrete_seamless.png") 50% 0 repeat fixed;
+  background: #fff;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
@@ -34,10 +57,9 @@ body {
   margin-top: 15%; }
 
 h1.home-head {
-  font-family: "Raleway Dots",cursive;
-  font-size: 6.25em;
+  font-size: 6em;
   background-color: rgba(0, 0, 0, 0.9);
-  line-height: 1.2em;
+  line-height: 1.4em;
   display: inline; }
 
 h1.home-head span {
@@ -67,18 +89,18 @@ nav.navbar-inverse {
   -webkit-border-radius: 125px;
   -moz-border-radius: 125px; }
 
-#bio-image {
-  background: url("/img/justin-headshot-250.jpg") no-repeat; }
-
-#skillset {
-  background: #fff; }
-
-#skillset, #bio {
-  padding: 1em 0 4em 0; }
+ul.skills li:before, ul.project-skill li:before {
+  font-family: 'FontAwesome';
+  content: "\f054";
+  margin: 0 5px 0 -15px;
+  color: #f05f40; }
 
 .short-hr {
   max-width: 50px;
   border-width: 3px; }
+
+.orange-hr {
+  border-color: #f05f40; }
 
 /*Scroll Down Animation*/
 @-moz-keyframes bounce {

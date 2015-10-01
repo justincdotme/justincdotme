@@ -45,7 +45,7 @@
     <meta name="theme-color" content="#222222">
 
     <link rel="author" href="https://plus.google.com/115474380698631066615/posts"/>
-    <link href='http://fonts.googleapis.com/css?family=Raleway+Dots|Open+Sans' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
 
@@ -68,7 +68,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand scroll" href="#home"><span class="blue">justinc.me</span></a>
+            <a class="navbar-brand scroll" href="#home"><span class="orange">justinc.me</span></a>
         </div>
         <div class="collapse navbar-collapse" id="main-navigation">
             <ul class="nav navbar-nav">
@@ -114,7 +114,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center head-container">
-                <h1 class="home-head white"><span>Justin Christenson is a&nbsp;<br/>&nbsp;Web Developer&nbsp;<br/>&nbsp;in Vancouver, WA.</span></h1>
+                <h1 class="home-head white"><span>Justin Christenson is a&nbsp;<br/>&nbsp;<span class="orange">Web Developer</span>&nbsp;<br/>&nbsp;in Vancouver, WA.</span></h1>
             </div>
             <a href="#about" id="scroll-down" class="scroll">
                 <div class="arrow bounce">
@@ -141,7 +141,7 @@
                 <div class="col-sm-12">
                     <h1 class="white text-center">About Me</h1>
                     <hr class="short-hr"/>
-                    <div class="circular col-sm-3" id="bio-image"></div>
+                    <div class="circular col-sm-3 wow rollIn" id="bio-image"></div>
                     <div class="col-sm-9" id="bio-text">
                         <p class="indent white">I'm a web developer, open source enthusiast and Jedi Apprentice living in beautiful Vancouver, WA. I started my career as a front end developer after earning a degree in Web Design and Interactive Media in 2011.</p>
                         <p class="indent white">I worked as a front end developer after graduation but soon realized that I have an even greater love for writing server side code. At this point, I began teaching myself back end development on a LAMP stack in my free time while continuing to work primarily as a front end developer.</p>
@@ -156,35 +156,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="text-center orange">Skills</h1>
+                    <h1 class="text-center orange">Skillset</h1>
+                    <hr class="short-hr orange-hr"/>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <i class="fa fa-4x fa-desktop wow bounceIn orange" style="visibility: visible; animation-name: bounceIn;"></i>
+                <div class="col-sm-4 text-center">
+                    <i class="fa fa-4x fa-desktop wow rollIn orange text-center"></i>
                     <h3>Front End</h3>
-                    <ul>
+                    <ul class="skills">
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>jQuery</li>
                     </ul>
                 </div>
-                <div class="col-sm-4">
-                    <i class="fa fa-4x fa-database wow bounceIn orange" style="visibility: visible; animation-name: bounceIn;"></i>
+                <div class="col-sm-4 text-center">
+                    <i class="fa fa-4x fa-database wow rollIn orange text-center"></i>
                     <h3>Back End</h3>
-                    <ul>
+                    <ul class="skills">
                         <li>PHP (Object Oriented)</li>
                         <li>SQL (MySQL)</li>
                         <li>Laravel Framework</li>
-                        <li>LNMP Server Administration</li>
+                        <li>Server Administration (LEMP)</li>
                     </ul>
                 </div>
-                <div class="col-sm-4">
-                    <i class="fa fa-4x fa-wrench wow bounceIn orange" style="visibility: visible; animation-name: bounceIn;"></i>
+                <div class="col-sm-4 text-center">
+                    <i class="fa fa-4x fa-wrench wow rollIn orange text-center"></i>
                     <h3>Tools</h3>
-                    <ul>
+                    <ul class="skills">
                         <li>Adobe Photoshop</li>
                         <li>PhpStorm</li>
                         <li>Git</li>
@@ -232,22 +233,22 @@
                                 <h3 class="skills-head project-detail">Skills Used</h3>
                                 <ul class="skills">
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Laravel 4
+                                        Laravel 4
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                        Object Oriented PHP
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> MySQL
+                                        MySQL
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                        JavaScript &amp; jQuery
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS
+                                        HTML / CSS
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Web Server Administration
+                                        Web Server Administration
                                     </li>
                                 </ul>
                             </div>
@@ -285,13 +286,13 @@
                                 <h3 class="skills-head project-detail">Skills Used</h3>
                                 <ul class="skills">
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                        Object Oriented PHP
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                        JavaScript &amp; jQuery
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS
+                                        HTML / CSS
                                     </li>
                                 </ul>
                             </div>
@@ -329,16 +330,16 @@
                                 <h3 class="skills-head project-detail">Skills Used</h3>
                                 <ul class="skills">
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Wordpress Theme Development
+                                        Wordpress Theme Development
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                        Object Oriented PHP
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                        JavaScript &amp; jQuery
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS (SCSS)
+                                        HTML / CSS (SCSS)
                                     </li>
                                 </ul>
                             </div>
@@ -376,22 +377,22 @@
                                 <h3 class="skills-head project-detail">Skills Used</h3>
                                 <ul class="skills">
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                        Object Oriented PHP
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> MySQL
+                                        MySQL
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> ORM (Eloquent)
+                                        ORM (Eloquent)
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                        JavaScript &amp; jQuery
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS (SCSS)
+                                        HTML / CSS (SCSS)
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> API Consumption
+                                        API Consumption
                                     </li>
                                 </ul>
                             </div>
@@ -431,22 +432,22 @@
                                 <h3 class="skills-head project-detail">Skills Used</h3>
                                 <ul class="skills">
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Laravel 5
+                                        Laravel 5
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                        Object Oriented PHP
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> MySQL
+                                        MySQL
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> ORM (Eloquent)
+                                        ORM (Eloquent)
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                        JavaScript &amp; jQuery
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS (SCSS)
+                                        HTML / CSS (SCSS)
                                     </li>
                                 </ul>
                             </div>
@@ -486,16 +487,16 @@
                                 <h3 class="skills-head project-detail">Skills Used</h3>
                                 <ul class="skills">
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                        Object Oriented PHP
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                        JavaScript &amp; jQuery
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS (SCSS)
+                                        HTML / CSS (SCSS)
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> API Consumption
+                                        API Consumption
                                     </li>
                                 </ul>
                             </div>
@@ -534,16 +535,16 @@
                                 <h3 class="skills-head project-detail">Skills Used</h3>
                                 <ul class="skills">
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> Object Oriented PHP
+                                        Object Oriented PHP
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> JavaScript &amp; jQuery
+                                        JavaScript &amp; jQuery
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> HTML / CSS (SCSS)
+                                        HTML / CSS (SCSS)
                                     </li>
                                     <li class="project-skill">
-                                        <span class="glyphicon glyphicon-chevron-right blue"></span> API Consumption
+                                        API Consumption
                                     </li>
                                 </ul>
                             </div>

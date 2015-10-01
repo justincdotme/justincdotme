@@ -60,6 +60,11 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   max-width: 1920px;
   position: relative;
+
+  .black-bg {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
 }
 
 #contact {
@@ -92,7 +97,7 @@ h1.home-head span {
   color: $orange;
 }
 
-section.pages {
+.buffer-top {
   padding-top: 50px !important;
 }
 

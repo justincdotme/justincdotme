@@ -45,6 +45,8 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   max-width: 1920px;
   position: relative; }
+  #portfolio .black-bg {
+    background: rgba(0, 0, 0, 0.5); }
 
 #contact {
   background: #fff;
@@ -71,7 +73,7 @@ h1.home-head span {
 .orange {
   color: #f05f40; }
 
-section.pages {
+.buffer-top {
   padding-top: 50px !important; }
 
 div.contact-errors {

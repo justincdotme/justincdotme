@@ -19,11 +19,9 @@ elixir(function(mix) {
         '/bower/jquery-easing-original/jquery.easing.js',
         '/justin/main.js'
     ], 'public/js/scripts.js');
-
     mix.sass([
         'main.scss'
     ], 'public/css/main.css');
-
     mix.version([
         'public/css/main.css',
         'public/js/scripts.js'

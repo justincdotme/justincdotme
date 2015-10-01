@@ -2,15 +2,9 @@ $(document).ready(function(){
 
     $window = $(window);
 
-    //Set page's min-height to 100% window height
+    //Set home page's height to 100% window height
     winHeight = $window.height();
-    $('.pages').each(function()
-    {
-        elementHeight = $(this).height();
-        if(elementHeight < winHeight) {
-            $(this).height(winHeight);
-        }
-    });
+    $('section#home').height(winHeight);
 
     //Parallax scrolling
     $('section[data-type="background"]').each(function(){
@@ -33,4 +27,6 @@ $(document).ready(function(){
         }, 1000, 'easeInOutExpo');
         e.preventDefault();
     });
+
+    new WOW().init();
 });

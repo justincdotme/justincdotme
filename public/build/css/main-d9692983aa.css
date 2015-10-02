@@ -32,14 +32,13 @@ h1, h2, h3, h4, h5 {
     background: url("/img/justin-headshot-250.jpg") no-repeat;
     border: 6px solid white; }
   #about #skillset {
-    background: #fff; }
+    background: #fff;
+    padding: 2em 0; }
   #about #bio {
     padding: 2em 0 4em 0; }
   #about #bio-text {
     padding-left: 2em;
     line-height: 1.725em; }
-  #about #skillset {
-    padding: 2em 0; }
   #about ul.skills {
     padding-left: 20px;
     width: 200px;
@@ -62,26 +61,26 @@ h1, h2, h3, h4, h5 {
     color: #000;
     text-decoration: none; }
 
-#portfolio {
+#portfolio-wrapper {
   background: url("/img/pdx_bg_dark_1.jpg") 50% 0 repeat fixed;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
   position: relative; }
 
-#contact {
+#contact-wrapper {
   background: url("/img/pdx_bg_dark_1.jpg") 50% 0 repeat fixed;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
   position: relative; }
-  #contact div.contact-errors {
+  #contact-wrapper div.contact-errors {
     display: none; }
 
 ul.skills {
   list-style-type: none; }
 
-#portfolio, #contact {
+#portfolio-wrapper, #contact-wrapper {
   padding-top: 24em; }
 
 .white-bg {

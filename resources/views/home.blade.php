@@ -117,16 +117,7 @@
                 <h1 class="home-head white"><span>Justin Christenson is a&nbsp;<br/>&nbsp;<span class="orange">Web Developer</span>&nbsp;<br/>&nbsp;in Vancouver, WA.</span></h1>
             </div>
             <a href="#about" id="scroll-down" class="scroll">
-                <div class="arrow bounce">
-                    <!--
-                        What shall we use
-                        To fill the empty spaces
-                        Where we used to talk?
-                        How shall I fill
-                        The final places?
-                        How should I complete the wall
-                     -->
-                </div>
+                <div class="arrow bounce"></div>
             </a>
         </div>
     </div>
@@ -156,7 +147,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h1 class="text-center orange">Skillset</h1>
-                    <hr class="short-hr orange-hr"/>
+                    <br/>
                 </div>
             </div>
         </div>
@@ -168,6 +159,7 @@
                     <ul class="skills">
                         <li>HTML</li>
                         <li>CSS</li>
+                        <li>JavaScript</li>
                         <li>jQuery</li>
                     </ul>
                 </div>
@@ -177,6 +169,7 @@
                     <ul class="skills">
                         <li>PHP (Object Oriented)</li>
                         <li>SQL (MySQL)</li>
+                        <li>WordPress</li>
                         <li>Laravel Framework</li>
                         <li>Server Administration (LEMP)</li>
                     </ul>
@@ -199,8 +192,8 @@
 <!-- End About Page -->
 
 <!-- Begin Portfolio Page -->
-<section id="portfolio" data-type="background" data-speed="10" class="pages">
-    <div class="white-bg buffer-top">
+<section id="portfolio-wrapper" data-type="background" data-speed="10" class="pages">
+    <div class="white-bg buffer-top" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -567,74 +560,70 @@
 <!-- End Portfolio Page -->
 
 <!-- Begin Contact Page -->
-<section id="contact" data-type="background" data-speed="10" class="pages">
-    <div class="white-bg buffer-top">
+<section id="contact-wrapper" data-type="background" data-speed="10" class="pages">
+    <div class="white-bg buffer-top" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-
-
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="panel panel-default contact-panel inner-panel">
-                                        <div class="panel-body">
-                                            <div class="vcard contact">
-                                                <h4 class="tel">Phone: <a href="tel:+16053817180">605-381-7180</a></h4>
-                                                <h4 class="email">Email: <a href="mailto:info@justinc.me" class="email">info@justinc.me</a></h4>
-                                                <h4 class="skype">Skype: <a href="skype:justinc.me?chat" class="skype">justinc.me</a></h4>
-                                            </div>
-                                            <hr>
-                                            <div class="social-media">
-                                                <a target="_BLANK" href="https://twitter.com/justincdotme">
-                                                    <img data-src="/img/ico/twitter-64.jpg" src="/img/ico/twitter-64.jpg" class="deferred">
-                                                </a>
-                                                <a target="_BLANK" href="https://plus.google.com/115474380698631066615/posts">
-                                                    <img data-src="/img/ico/google-plus-64.jpg" src="/img/ico/google-plus-64.jpg" class="deferred">
-                                                </a>
-                                                <a target="_BLANK" href="https://www.linkedin.com/pub/justin-christenson/1a/175/ab2">
-                                                    <img data-src="/img/ico/linkedin-64.jpg" src="/img/ico/linkedin-64.jpg" class="deferred">
-                                                </a>
-                                                <a target="_BLANK" href="https://github.com/justincdotme">
-                                                    <img data-src="/img/ico/github_64.png" src="/img/ico/github_64.png" class="deferred">
-                                                </a>
-                                            </div>
-                                        </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="panel panel-default contact-panel inner-panel">
+                                <div class="panel-body">
+                                    <div class="vcard contact">
+                                        <h4 class="tel">Phone: <a href="tel:+16053817180">605-381-7180</a></h4>
+                                        <h4 class="email">Email: <a href="mailto:info@justinc.me" class="email">info@justinc.me</a></h4>
+                                        <h4 class="skype">Skype: <a href="skype:justinc.me?chat" class="skype">justinc.me</a></h4>
                                     </div>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="row contact-errors">
-                                        <div class="col-sm-12">
-                                            <div class="alert alert-danger">
-                                                <h1>Error</h1>
-                                                <ul class="messages">
-                                                </ul>
-                                            </div>
-                                        </div>
+                                    <hr>
+                                    <div class="social-media">
+                                        <a target="_BLANK" href="https://twitter.com/justincdotme">
+                                            <img data-src="/img/ico/twitter-64.jpg" src="/img/ico/twitter-64.jpg" class="deferred">
+                                        </a>
+                                        <a target="_BLANK" href="https://plus.google.com/115474380698631066615/posts">
+                                            <img data-src="/img/ico/google-plus-64.jpg" src="/img/ico/google-plus-64.jpg" class="deferred">
+                                        </a>
+                                        <a target="_BLANK" href="https://www.linkedin.com/pub/justin-christenson/1a/175/ab2">
+                                            <img data-src="/img/ico/linkedin-64.jpg" src="/img/ico/linkedin-64.jpg" class="deferred">
+                                        </a>
+                                        <a target="_BLANK" href="https://github.com/justincdotme">
+                                            <img data-src="/img/ico/github_64.png" src="/img/ico/github_64.png" class="deferred">
+                                        </a>
                                     </div>
-                                    <form action="/contact" id="contact-form" method="POST">
-                                        <input type="hidden" value="UwLmBxEm8ll8V2hBagIF6tiYGZWfRCs4mMTBCYcf" name="_token">
-                                        <div class="form-group">
-                                            <label for="name">Name</label><br>
-                                            <input type="text" required="" value="" name="name" class="form-control required" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: right center;">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email">Email Address</label><br>
-                                            <input type="email" required="" value="" name="email" class="form-control required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="phone">Phone Number</label><br>
-                                            <input type="text" value="" maxlength="12" name="phone" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message">Message</label><br>
-                                            <textarea required="" rows="10" class="form-control required" name="message"></textarea>
-                                        </div>
-                                        <button class="btn info-button contact-button btn-lg" type="submit">Contact</button>
-                                    </form>
                                 </div>
                             </div>
-
-
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="row contact-errors">
+                                <div class="col-sm-12">
+                                    <div class="alert alert-danger">
+                                        <h1>Error</h1>
+                                        <ul class="messages">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="/contact" id="contact-form" method="POST">
+                                <input type="hidden" value="UwLmBxEm8ll8V2hBagIF6tiYGZWfRCs4mMTBCYcf" name="_token">
+                                <div class="form-group">
+                                    <label for="name">Name</label><br>
+                                    <input type="text" required="" value="" name="name" class="form-control required" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: right center;">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label><br>
+                                    <input type="email" required="" value="" name="email" class="form-control required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label><br>
+                                    <input type="text" value="" maxlength="12" name="phone" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label><br>
+                                    <textarea required="" rows="10" class="form-control required" name="message"></textarea>
+                                </div>
+                                <button class="btn info-button contact-button btn-lg" type="submit">Contact</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

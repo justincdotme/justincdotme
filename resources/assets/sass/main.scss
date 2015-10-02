@@ -48,6 +48,7 @@ h1, h2, h3, h4, h5 {
 
   #skillset {
     background: #fff;
+    padding: 2em 0;
   }
 
   #bio {
@@ -59,9 +60,6 @@ h1, h2, h3, h4, h5 {
     line-height: 1.725em;
   }
 
-  #skillset {
-    padding: 2em 0;
-  }
 
   ul.skills {
     padding-left: 20px;
@@ -95,7 +93,7 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-#portfolio {
+#portfolio-wrapper {
   background: url('/img/pdx_bg_dark_1.jpg') 50% 0 repeat fixed;
   margin: 0 auto;
   width: 100%;
@@ -103,7 +101,7 @@ h1, h2, h3, h4, h5 {
   position: relative;
 }
 
-#contact {
+#contact-wrapper {
   background: url('/img/pdx_bg_dark_1.jpg') 50% 0 repeat fixed;
   margin: 0 auto;
   width: 100%;
@@ -119,7 +117,7 @@ ul.skills {
   list-style-type: none;
 }
 
-#portfolio, #contact {
+#portfolio-wrapper, #contact-wrapper {
   padding-top: 24em;
 }
 

@@ -135,7 +135,7 @@
                     <div class="circular col-sm-3 wow rollIn" id="bio-image"></div>
                     <div class="col-sm-9" id="bio-text">
                         <p class="indent white">I'm a web developer, open source enthusiast and Jedi Apprentice living in beautiful Vancouver, WA. I started my career as a front end developer after earning a degree in Web Design and Interactive Media in 2011.</p>
-                        <p class="indent white">I worked as a front end developer after graduation and soon realized that I enjoy working on the server side as well. At this point, I began teaching myself back end development on a LAMP stack in my free time while continuing to work primarily as a front end developer.</p>
+                        <p class="indent white">I worked as a front end developer after graduation and soon realized that I also enjoy working on the server side. At this point, I began teaching myself back end development on a LAMP stack in my free time while continuing to work primarily as a front end developer.</p>
                         <p class="indent white">I currently work as a freelance web developer creating websites using HTML, CSS, PHP, and MySQL. I also enjoy using Laravel and WordPress to create advanced websites and applications.</p>
                     </div>
                 </div>
@@ -349,7 +349,7 @@
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://bookme.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
                                     <a class="btn info-button" target="_BLANK" href="http://bookme.demos.justinc.me/admin"><span class="glyphicon glyphicon-link"></span> Demo Admin Interface</a>
-                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/bookme"><img height="16" src="/img/ico/github-official-32-white.png"> GitHub</a>
+                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/bookme"><i class="fa fa-github"></i> GitHub</a>
                                 </p>
                             </div>
                             <div class="col-sm-3">
@@ -397,7 +397,7 @@
                                 <p class="indent last-paragraph">The application utilizes the HTML5 Geolocation API to get the user's current location and then uses the IpInfo API to obtain the users ISP. The IpInfo API is also used as a geolocation fallback, should the user's browser not support geolocation. The application then uses the Google Places Web Services API to determine nearby ISPs.</p>
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://findmyisp.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
-                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/findmyisp"><img height="16" src="/img/ico/github-official-32-white.png"> GitHub</a>
+                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/findmyisp"><i class="fa fa-github"></i> GitHub</a>
                                 </p>
                             </div>
                             <div class="col-sm-3">
@@ -439,7 +439,7 @@
                                 <p class="indent last-paragraph">This application retrieves the statuses via the Twitter REST API, then caches the JSON responses to a flat file 15 minutes to avoid the Twitter API rate limits. Next, TweetMe repackages the cached JSON response to filter out unneeded properties and then outputs the repackaged timeline in either JSON or formatted HTML.</p>
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://tweetme.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
-                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/tweetme"><img height="16" src="/img/ico/github-official-32-white.png"> GitHub</a>
+                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/tweetme"><i class="fa fa-github"></i> GitHub</a>
                                 </p>
                             </div>
                             <div class="col-sm-3">
@@ -484,7 +484,7 @@
                                         <h4 class="skype">Skype: <a href="skype:justinc.me?chat" class="skype">justinc.me</a></h4>
                                     </div>
                                     <hr class="orange-hr"/>
-                                    <div class="social-media">
+                                    <div id="social-media">
                                         <a target="_BLANK" href="https://twitter.com/justincdotme">
                                             <img data-src="/img/ico/twitter-64.jpg" src="/img/ico/twitter-64.jpg" class="deferred">
                                         </a>
@@ -497,6 +497,7 @@
                                         <a target="_BLANK" href="https://github.com/justincdotme">
                                             <img data-src="/img/ico/github_64.png" src="/img/ico/github_64.png" class="deferred">
                                         </a>
+                                        <span class="distribute"></span>
                                     </div>
                                 </div>
                             </div>
@@ -529,7 +530,7 @@
                                     <label for="message">Message</label><br>
                                     <textarea required=""  placeholder="Message" rows="10" class="form-control required" name="message"></textarea>
                                 </div>
-                                <button class="btn info-button contact-button btn-lg" type="submit">Contact</button>
+                                <button id="contact-btn" class="btn info-button btn-lg" type="submit">Contact</button>
                             </form>
                         </div>
                     </div>

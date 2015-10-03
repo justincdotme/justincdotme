@@ -97,6 +97,34 @@ h1, h2, h3, h4, h5 {
 
 #contact {
   padding-bottom: 4em; }
+  #contact #contact-btn {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0 0;
+    color: #fff;
+    background-color: #f05f40;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: none;
+    padding: 4px 16px; }
+  #contact #social-media {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines; }
+  #contact #social-media a {
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    zoom: 1; }
+  #contact .distribute {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0; }
 
 #footer {
   background: #f05f40;
@@ -200,5 +228,35 @@ a#scroll-down .bounce {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite; }
+
+/*Bootstrap Overrides*/
+.thumbnail {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0; }
+
+nav.navbar-inverse {
+  background-image: none;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.9); }
+
+.navbar-inverse .navbar-nav > .active,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background-image: none; }
+
+ul.dropdown-menu {
+  background-color: #080808;
+  border: none; }
+  ul.dropdown-menu li > a {
+    color: #fff; }
+  ul.dropdown-menu li > a:hover, ul.dropdown-menu .dropdown-menu li > a:focus, ul.dropdown-menu .dropdown-submenu:hover > a {
+    background-image: none;
+    background-color: #222;
+    color: #eee; }
+  ul.dropdown-menu ul.work-menu.dropdown-menu .active a {
+    background-color: #f05f40; }
 
 /*# sourceMappingURL=main.css.map */

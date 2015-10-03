@@ -483,7 +483,7 @@
                                         <h4 class="email">Email: <a href="mailto:info@justinc.me" class="email">info@justinc.me</a></h4>
                                         <h4 class="skype">Skype: <a href="skype:justinc.me?chat" class="skype">justinc.me</a></h4>
                                     </div>
-                                    <hr>
+                                    <hr class="orange-hr"/>
                                     <div class="social-media">
                                         <a target="_BLANK" href="https://twitter.com/justincdotme">
                                             <img data-src="/img/ico/twitter-64.jpg" src="/img/ico/twitter-64.jpg" class="deferred">
@@ -515,19 +515,19 @@
                                 <input type="hidden" value="UwLmBxEm8ll8V2hBagIF6tiYGZWfRCs4mMTBCYcf" name="_token">
                                 <div class="form-group">
                                     <label for="name">Name</label><br>
-                                    <input type="text" required="" value="" name="name" class="form-control required" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: right center;">
+                                    <input type="text" placeholder="Luke Skywalker" required="" value="" name="name" class="form-control required">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email Address</label><br>
-                                    <input type="email" required="" value="" name="email" class="form-control required">
+                                    <input type="email" placeholder="rebels@hoth.com" required="" value="" name="email" class="form-control required">
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Phone Number</label><br>
-                                    <input type="text" value="" maxlength="12" name="phone" class="form-control">
+                                    <input type="text" placeholder="555-555-5555" value="" maxlength="12" name="phone" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Message</label><br>
-                                    <textarea required="" rows="10" class="form-control required" name="message"></textarea>
+                                    <textarea required=""  placeholder="Message" rows="10" class="form-control required" name="message"></textarea>
                                 </div>
                                 <button class="btn info-button contact-button btn-lg" type="submit">Contact</button>
                             </form>
@@ -540,6 +540,17 @@
 </section>
 <!-- End Contact Page -->
 
+<!-- Begin Footer -->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <p class="text-center">Copyright 2015 &copy; Justin Christenson.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
 <!-- End Body-->
 <script src="{{ elixir('js/scripts.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>

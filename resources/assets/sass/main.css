@@ -83,10 +83,14 @@ h1, h2, h3, h4, h5 {
   #contact-wrapper div.contact-errors {
     display: none; }
 
+#contact {
+  padding-bottom: 4em; }
+
 #footer {
   background: #f05f40;
   margin: 0 auto;
-  padding: 4em; }
+  padding: 4em;
+  color: #fff; }
 
 ul.skills {
   list-style-type: none; }

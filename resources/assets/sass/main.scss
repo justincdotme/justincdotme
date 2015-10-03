@@ -143,6 +143,40 @@ h1, h2, h3, h4, h5 {
 
 #contact {
   padding-bottom: 4em;
+
+  #contact-btn {
+    -webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    -moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    color:#fff;
+    background-color:$orange;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:none;
+    padding:4px 16px;
+  }
+
+  #social-media {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+  }
+  #social-media a {
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+  }
+  .distribute {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+  }
 }
 
 #footer {

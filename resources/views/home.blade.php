@@ -484,7 +484,7 @@
                                         <h4 class="skype">Skype: <a href="skype:justinc.me?chat" class="skype">justinc.me</a></h4>
                                     </div>
                                     <hr class="orange-hr"/>
-                                    <div class="social-media">
+                                    <div id="social-media">
                                         <a target="_BLANK" href="https://twitter.com/justincdotme">
                                             <img data-src="/img/ico/twitter-64.jpg" src="/img/ico/twitter-64.jpg" class="deferred">
                                         </a>
@@ -497,6 +497,7 @@
                                         <a target="_BLANK" href="https://github.com/justincdotme">
                                             <img data-src="/img/ico/github_64.png" src="/img/ico/github_64.png" class="deferred">
                                         </a>
+                                        <span class="distribute"></span>
                                     </div>
                                 </div>
                             </div>
@@ -529,7 +530,7 @@
                                     <label for="message">Message</label><br>
                                     <textarea required=""  placeholder="Message" rows="10" class="form-control required" name="message"></textarea>
                                 </div>
-                                <button class="btn info-button contact-button btn-lg" type="submit">Contact</button>
+                                <button id="contact-btn" class="btn info-button btn-lg" type="submit">Contact</button>
                             </form>
                         </div>
                     </div>

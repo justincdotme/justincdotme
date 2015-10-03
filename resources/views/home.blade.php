@@ -114,7 +114,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center head-container">
-                <h1 class="home-head white"><span>Justin Christenson is a&nbsp;<br/>&nbsp;<span class="orange">Web Developer</span>&nbsp;<br/>&nbsp;in Vancouver, WA.</span></h1>
+                <h1 class="home-head white"><span><span>Justin Christenson is a</span><br/><span class="orange">Web Developer</span><br/><span>in Vancouver, WA.</span></span></h1>
             </div>
             <a href="#about" id="scroll-down" class="scroll">
                 <div class="arrow bounce"></div>
@@ -546,8 +546,8 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <p class="text-center">Copyright 2015 &copy; Justin Christenson.</p>
-                <p class="text-center">All rights reserved.</p>
+                <p class="text-center">Copyright 2015 &copy; Justin Christenson. <br/>
+                All rights reserved.</p>
             </div>
         </div>
     </div>

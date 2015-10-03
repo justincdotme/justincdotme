@@ -2,6 +2,26 @@ body {
   margin: 0;
   color: #222; }
 
+@media (min-width: 970px) {
+  h1.home-head {
+    font-size: 5.25em; } }
+
+@media (min-width: 750px) and (max-width: 970px) {
+  h1.home-head {
+    font-size: 4em; } }
+
+@media (min-width: 561px) and (max-width: 749px) {
+  h1.home-head {
+    font-size: 3.4em; } }
+
+@media (min-width: 381px) and (max-width: 560px) {
+  h1.home-head {
+    font-size: 3.2em; } }
+
+@media (max-width: 380px) {
+  h1.home-head {
+    font-size: 3em; } }
+
 h1, h2, h3, h4, h5 {
   font-family: "Open Sans","Helvetica Neue",Arial,sans-serif; }
 
@@ -11,15 +31,14 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   max-width: 1920px;
   position: relative; }
+  #home .head-container {
+    margin-top: 15%; }
   #home h1.home-head {
-    font-size: 5.25em;
     background-color: rgba(0, 0, 0, 0.9);
     line-height: 1.425em;
     display: inline; }
   #home h1.home-head span {
     padding: 0.2em; }
-  #home .head-container {
-    margin-top: 15%; }
 
 #about {
   font-size: 1.125em;

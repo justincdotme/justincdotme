@@ -547,6 +547,7 @@
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <p class="text-center">Copyright 2015 &copy; Justin Christenson.</p>
+                <p class="text-center">All rights reserved.</p>
             </div>
         </div>
     </div>

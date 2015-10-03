@@ -349,7 +349,7 @@
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://bookme.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
                                     <a class="btn info-button" target="_BLANK" href="http://bookme.demos.justinc.me/admin"><span class="glyphicon glyphicon-link"></span> Demo Admin Interface</a>
-                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/bookme"><img height="16" src="/img/ico/github-official-32-white.png"> GitHub</a>
+                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/bookme"><i class="fa fa-github"></i> GitHub</a>
                                 </p>
                             </div>
                             <div class="col-sm-3">
@@ -397,7 +397,7 @@
                                 <p class="indent last-paragraph">The application utilizes the HTML5 Geolocation API to get the user's current location and then uses the IpInfo API to obtain the users ISP. The IpInfo API is also used as a geolocation fallback, should the user's browser not support geolocation. The application then uses the Google Places Web Services API to determine nearby ISPs.</p>
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://findmyisp.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
-                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/findmyisp"><img height="16" src="/img/ico/github-official-32-white.png"> GitHub</a>
+                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/findmyisp"><i class="fa fa-github"></i> GitHub</a>
                                 </p>
                             </div>
                             <div class="col-sm-3">
@@ -439,7 +439,7 @@
                                 <p class="indent last-paragraph">This application retrieves the statuses via the Twitter REST API, then caches the JSON responses to a flat file 15 minutes to avoid the Twitter API rate limits. Next, TweetMe repackages the cached JSON response to filter out unneeded properties and then outputs the repackaged timeline in either JSON or formatted HTML.</p>
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://tweetme.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
-                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/tweetme"><img height="16" src="/img/ico/github-official-32-white.png"> GitHub</a>
+                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/tweetme"><i class="fa fa-github"></i> GitHub</a>
                                 </p>
                             </div>
                             <div class="col-sm-3">

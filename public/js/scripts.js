@@ -40543,13 +40543,32 @@ $.extend( $.easing,
 	}
 });})(jQuery);
 
-$(document).ready(function(){
+var justincMe = window.justincMe || {};
 
-    $window = $(window);
+var $window = $(window);
 
-    //Set home page's height to 100% window height
+//Set home page's height to 100% window height
+justincMe.setHomeHeight = function()
+{
     winHeight = $window.height();
     $('section#home').height(winHeight);
+};
+
+//Reset home page's height to 100% on orientation change
+
+window.addEventListener("orientationchange", function() {
+    justincMe.setHomeHeight();
+}, false);
+
+//Reset home page's height to 100% on window resize
+window.addEventListener("resize", function() {
+    justincMe.setHomeHeight();
+}, false);
+
+
+$(document).ready(function(){
+
+    justincMe.setHomeHeight();
 
     //Parallax scrolling
     $('section[data-type="background"]').each(function(){

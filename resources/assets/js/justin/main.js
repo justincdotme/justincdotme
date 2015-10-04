@@ -80,7 +80,7 @@ justinc.contactForm.checkRequiredFields = function()
 /**
  * Handle form submission.
  */
-$('form#contact-form1234').submit(function(e)
+$('form#contact-form').submit(function(e)
 {
     var submitBtn = $(this).find('button[type="submit"]');
     if(justinc.contactForm.checkRequiredFields())

@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('EMAIL_HOST', 'smtp.mandrillapp.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('EMAIL_PORT', 587),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,10 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => [
+        'address' => env('FROM_ADDRESS'),
+        'name' => env('EMAIL_NAME')
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +83,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('SMTP_USERNAME'),
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +96,8 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('SMTP_PASS'),
+
 
     /*
     |--------------------------------------------------------------------------

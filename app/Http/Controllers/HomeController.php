@@ -23,20 +23,16 @@ class HomeController extends Controller
     /**
      * Get the homepage content and metadata.
      *
+     * @param Request $request
      * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        try {
-            $page = Page::getPageData($this->page)->firstOrFail();
-        } catch(Exception $e) {
-            return $this->response->errorNotFound();
-        }
+        //Check if the contact submission cookie has been set
+        $contacted = ($request->cookie('cconf')) ? $request->cookie('cconf') : false;
 
-        return $this->response()
-            ->item($page, new PageTransformer())
-            ->addMeta('status', 'success')
-            ->setStatusCode(200);
+        return view('public.home')
+            ->withContacted($contacted);
     }
 
     /**

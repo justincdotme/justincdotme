@@ -136,6 +136,8 @@ h1, h2, h3, h4, h5 {
   position: relative; }
   #contact-wrapper div.contact-errors {
     display: none; }
+  #contact-wrapper .contact-form-error {
+    border: 2px solid red; }
 
 #contact {
   padding-bottom: 4em; }

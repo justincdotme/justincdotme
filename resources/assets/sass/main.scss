@@ -204,6 +204,10 @@ h1, h2, h3, h4, h5 {
   div.contact-errors {
     display: none;
   }
+
+  .contact-form-error {
+    border: 2px solid red;
+  }
 }
 
 #contact {

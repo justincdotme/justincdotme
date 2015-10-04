@@ -18,8 +18,7 @@ class CreateProjectImagesTable extends Migration
             $table->increments('id');
             $table->integer('project_id')->unsigned();
             $table->foreign('project_id')->references('id')->on('projects');
-            $table->string('full_path');
-            $table->string('thumb_path');
+            $table->string('image_path');
             $table->string('alt_text')->nullable();
             $table->timestamps();
         });

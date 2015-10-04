@@ -74,7 +74,6 @@ class ProjectSkillsTableSeeder extends Seeder
             'skill_id'      => 5
         ]);
 
-
         DB::table('project_skill')->insert([
             'project_id'    => 3,
             'skill_id'      => 7
@@ -82,50 +81,35 @@ class ProjectSkillsTableSeeder extends Seeder
 
         DB::table('project_skill')->insert([
             'project_id'    => 4,
+            'skill_id'      => 3
+        ]);
+
+        DB::table('project_skill')->insert([
+            'project_id'    => 4,
+            'skill_id'      => 4
+        ]);
+
+        DB::table('project_skill')->insert([
+            'project_id'    => 4,
+            'skill_id'      => 10
+        ]);
+
+        DB::table('project_skill')->insert([
+            'project_id'    => 4,
+            'skill_id'      => 5
+        ]);
+
+        DB::table('project_skill')->insert([
+            'project_id'    => 4,
+            'skill_id'      => 7
+        ]);
+
+        DB::table('project_skill')->insert([
+            'project_id'    => 5,
             'skill_id'      => 2
         ]);
 
         DB::table('project_skill')->insert([
-            'project_id'    => 4,
-            'skill_id'      => 3
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 4,
-            'skill_id'      => 4
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 4,
-            'skill_id'      => 5
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 4,
-            'skill_id'      => 6
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 4,
-            'skill_id'      => 7
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 4,
-            'skill_id'      => 8
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 4,
-            'skill_id'      => 10
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 4,
-            'skill_id'      => 11
-        ]);
-
-        DB::table('project_skill')->insert([
             'project_id'    => 5,
             'skill_id'      => 3
         ]);
@@ -152,22 +136,7 @@ class ProjectSkillsTableSeeder extends Seeder
 
         DB::table('project_skill')->insert([
             'project_id'    => 6,
-            'skill_id'      => 2
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 6,
             'skill_id'      => 3
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 6,
-            'skill_id'      => 4
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 6,
-            'skill_id'      => 10
         ]);
 
         DB::table('project_skill')->insert([
@@ -181,42 +150,27 @@ class ProjectSkillsTableSeeder extends Seeder
         ]);
 
         DB::table('project_skill')->insert([
-            'project_id'    => 7,
-            'skill_id'      => 3
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 7,
-            'skill_id'      => 5
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 7,
-            'skill_id'      => 7
-        ]);
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 7,
+            'project_id'    => 6,
             'skill_id'      => 12
         ]);
 
         DB::table('project_skill')->insert([
-            'project_id'    => 8,
+            'project_id'    => 7,
             'skill_id'      => 3
         ]);
 
         DB::table('project_skill')->insert([
-            'project_id'    => 8,
+            'project_id'    => 7,
             'skill_id'      => 5
         ]);
 
         DB::table('project_skill')->insert([
-            'project_id'    => 8,
+            'project_id'    => 7,
             'skill_id'      => 7
         ]);
 
         DB::table('project_skill')->insert([
-            'project_id'    => 8,
+            'project_id'    => 7,
             'skill_id'      => 12
         ]);
     }

@@ -2,6 +2,46 @@ body {
   margin: 0;
   color: #222; }
 
+@media (min-width: 1200px) {
+  .circular {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px; } }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .circular {
+    width: 176px;
+    height: 176px;
+    border-radius: 88px;
+    -webkit-border-radius: 88px;
+    -moz-border-radius: 88px; }
+  div.vcard.contact {
+    text-align: center; } }
+
+@media (max-width: 768px) {
+  .circular {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    margin: 0 auto; }
+  .skill-col {
+    width: 250px;
+    margin: 0 auto; }
+  h2.project-title,
+  h3.project-case-study,
+  p.project-case-p,
+  div.vcard.contact,
+  .skills-head,
+  div#bio-text p {
+    text-align: center; }
+  #contact button#contact-btn {
+    width: 100%;
+    padding: 1em; } }
+
 @media (min-width: 970px) {
   h1.home-head {
     font-size: 5.25em; } }
@@ -47,9 +87,6 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   max-width: 1920px;
   position: relative; }
-  #about #bio-image {
-    background: url("/img/justin-headshot-250.jpg") no-repeat;
-    border: 6px solid white; }
   #about #skillset {
     background: #fff;
     padding: 2em 0; }
@@ -58,27 +95,18 @@ h1, h2, h3, h4, h5 {
   #about #bio-text {
     padding-left: 2em;
     line-height: 1.725em; }
+  #about #bio-image {
+    background: url("/img/justin-headshot-250.jpg") no-repeat;
+    border: 6px solid white;
+    background-size: 100%; }
   #about ul.skills {
-    padding-left: 20px;
     width: 200px;
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
     *display: inline;
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
     text-align: left; }
-  #about a:link {
-    color: #222;
-    text-decoration: none; }
-  #about a:active {
-    color: #000;
-    text-decoration: underline; }
-  #about a:hover {
-    color: #fff;
-    text-decoration: underline; }
-  #about a:visited {
-    color: #000;
-    text-decoration: none; }
 
 #portfolio-wrapper {
   background: url("/img/pdx_bg_dark_1.jpg") 50% 0 repeat fixed;
@@ -89,17 +117,19 @@ h1, h2, h3, h4, h5 {
   #portfolio-wrapper .project-container {
     margin-bottom: 4.5em;
     padding: 1.25em; }
+  #portfolio-wrapper ul.skills {
+    padding-left: 1em; }
   #portfolio-wrapper a:link {
     color: #f05f40;
     text-decoration: none; }
   #portfolio-wrapper a:hover {
-    color: #f05f40;
+    color: #ac3c24;
     text-decoration: underline; }
   #portfolio-wrapper a:active {
-    color: #222;
+    color: #ac3c24;
     text-decoration: none; }
   #portfolio-wrapper a:visited {
-    color: #222;
+    color: #ac3c24;
     text-decoration: none; }
 
 #contact-wrapper {
@@ -133,7 +163,8 @@ h1, h2, h3, h4, h5 {
     vertical-align: top;
     display: inline-block;
     *display: inline;
-    zoom: 1; }
+    zoom: 1;
+    margin-bottom: 0.5em; }
   #contact .distribute {
     width: 100%;
     display: inline-block;
@@ -168,13 +199,6 @@ nav.navbar-inverse {
   background-image: none;
   background-color: rgba(0, 0, 0, 0.75);
   border: 0 none; }
-
-.circular {
-  width: 250px;
-  height: 250px;
-  border-radius: 125px;
-  -webkit-border-radius: 125px;
-  -moz-border-radius: 125px; }
 
 ul.skills li:before, ul.project-skill li:before {
   font-family: 'FontAwesome';

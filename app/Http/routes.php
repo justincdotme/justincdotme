@@ -4,6 +4,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+/*
 //Import Dingo API router.
 use Dingo\Api\Facade\Route;
 
@@ -49,10 +51,10 @@ Route::version('v1', function()
             'except' => ['index']
         ]);
         Route::resource('contact','App\Http\Controllers\LeadController', [
-            'except' => ['index']
+            'except' => ['index', 'store']
         ]);
         Route::resource('portfolio','App\Http\Controllers\PortfolioController', [
             'except' => ['index', 'show']
         ]);
     });
-});
+});*/

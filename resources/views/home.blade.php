@@ -114,7 +114,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center head-container">
-                <h1 class="home-head white"><span>Justin Christenson is a&nbsp;<br/>&nbsp;<span class="orange">Web Developer</span>&nbsp;<br/>&nbsp;in Vancouver, WA.</span></h1>
+                <h1 class="home-head white"><span><span>Justin Christenson is a</span><br/><span class="orange">Web Developer</span><br/><span>in Vancouver, WA.</span></span></h1>
             </div>
             <a href="#about" id="scroll-down" class="scroll">
                 <div class="arrow bounce"></div>
@@ -130,8 +130,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="white text-center">About Me</h1>
-                    <hr class="short-hr"/>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1 class="white text-center">About Me</h1>
+                            <hr class="short-hr"/>
+                        </div>
+                    </div>
                     <div class="circular col-sm-3 wow rollIn" id="bio-image"></div>
                     <div class="col-sm-9" id="bio-text">
                         <p class="indent white">I'm a web developer, open source enthusiast and Jedi Apprentice living in beautiful Vancouver, WA. I started my career as a front end developer after earning a degree in Web Design and Interactive Media in 2011.</p>
@@ -218,8 +222,8 @@
                             </div>
                             <div class="col-sm-6 project-details">
                                 <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent">Fawkes FX is a small creative firm located in Portland, OR that I helped establish. We required a public website to showcase our services. The website also reuired a private administration interface with transactional email integration.</p>
-                                <p class="indent last-paragraph">The front end team at FawkesFX designed and built the public website, which I merged into a Laravel 4 application. I then designed and developed the administration interface featuring several custom modules including a user management module, an SEO module and a leads management module.</p>
+                                <p class="indent project-case-p">Fawkes FX is a small creative firm located in Portland, OR that I helped establish. We required a public website to showcase our services. The website also reuired a private administration interface with transactional email integration.</p>
+                                <p class="indent project-case-p last-paragraph">The front end team at FawkesFX designed and built the public website, which I merged into a Laravel 4 application. I then designed and developed the administration interface featuring several custom modules including a user management module, an SEO module and a leads management module.</p>
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://fawkesfx.com"><span class="glyphicon glyphicon-link"></span> Website</a>
                                 </p>
@@ -265,8 +269,8 @@
                             </div>
                             <div class="col-sm-6 project-details">
                                 <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent">Reliable Mobile Labs is a medical lab testing service with locations in several states. The client required a website to showcase their services, generate leads and allow physicians to log into a portal within the website.</p>
-                                <p class="indent last-paragraph">The team at FawkesFX put together the design and concept for this project. I assisted the front end team with client side development using JavaScript, some HTML and CSS. I then created a lead management system using PHP and capped it off with a router to allow for search engine friendly URLs.</p>
+                                <p class="indent project-case-p">Reliable Mobile Labs is a medical lab testing service with locations in several states. The client required a website to showcase their services, generate leads and allow physicians to log into a portal within the website.</p>
+                                <p class="indent project-case-p last-paragraph">The team at FawkesFX put together the design and concept for this project. I assisted the front end team with client side development using JavaScript, some HTML and CSS. I then created a lead management system using PHP and capped it off with a router to allow for search engine friendly URLs.</p>
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://reliablemobilelabs.com"><span class="glyphicon glyphicon-link"></span> Website</a>
                                 </p>
@@ -303,8 +307,8 @@
                             </div>
                             <div class="col-sm-6 project-details">
                                 <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent">Belssage is a massage therapy provider in Rapid City, SD. This project required a contact form for appointment scheduling, publishing of a quarterly newsletter, easy page updates and a list &amp; description of provided services.</p>
-                                <p class="indent last-paragraph">I designed the website using Photoshop and built the WordPress theme using HTML, CSS, PHP and JavaScript.</p>
+                                <p class="indent project-case-p">Belssage is a massage therapy provider in Rapid City, SD. This project required a contact form for appointment scheduling, publishing of a quarterly newsletter, easy page updates and a list &amp; description of provided services.</p>
+                                <p class="indent project-case-p last-paragraph">I designed the website using Photoshop and built the WordPress theme using HTML, CSS, PHP and JavaScript.</p>
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://www.belssage.com"><span class="glyphicon glyphicon-link"></span> Website</a>
                                 </p>
@@ -344,15 +348,15 @@
                             </div>
                             <div class="col-sm-6 project-details">
                                 <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent">bookMe is a personal project that I built in my free time using PHP5 and MySQL. The goal of this project was to create a fully functional property booking application from scratch using MVC architecture.</p>
-                                <p class="indent last-paragraph">The public site features property listings, a property availability module and a reservation booking module. The administrative interface features a user management module, a reservation management module and a property management module. The property management module comes complete with a rich text editor and image uploader.</p>
+                                <p class="indent project-case-p">bookMe is a personal project that I built in my free time using PHP5 and MySQL. The goal of this project was to create a fully functional property booking application from scratch using MVC architecture.</p>
+                                <p class="indent project-case-p last-paragraph">The public site features property listings, a property availability module and a reservation booking module. The administrative interface features a user management module, a reservation management module and a property management module. The property management module comes complete with a rich text editor and image uploader.</p>
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://bookme.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
                                     <a class="btn info-button" target="_BLANK" href="http://bookme.demos.justinc.me/admin"><span class="glyphicon glyphicon-link"></span> Demo Admin Interface</a>
                                     <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/bookme"><i class="fa fa-github"></i> GitHub</a>
                                 </p>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-3 skill-col">
                                 <h3 class="skills-head project-detail">Skills Used</h3>
                                 <ul class="skills">
                                     <li class="project-skill">
@@ -393,14 +397,14 @@
                             </div>
                             <div class="col-sm-6 project-details">
                                 <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent">FindMyISP is a personal project that I built in my free time. The primary goals of this project were to inform a user of who their current ISP is and display other ISP options in the user's area.</p>
-                                <p class="indent last-paragraph">The application utilizes the HTML5 Geolocation API to get the user's current location and then uses the IpInfo API to obtain the users ISP. The IpInfo API is also used as a geolocation fallback, should the user's browser not support geolocation. The application then uses the Google Places Web Services API to determine nearby ISPs.</p>
+                                <p class="indent project-case-p">FindMyISP is a personal project that I built in my free time. The primary goals of this project were to inform a user of who their current ISP is and display other ISP options in the user's area.</p>
+                                <p class="indent project-case-p last-paragraph">The application utilizes the HTML5 Geolocation API to get the user's current location and then uses the IpInfo API to obtain the users ISP. The IpInfo API is also used as a geolocation fallback, should the user's browser not support geolocation. The application then uses the Google Places Web Services API to determine nearby ISPs.</p>
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://findmyisp.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
                                     <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/findmyisp"><i class="fa fa-github"></i> GitHub</a>
                                 </p>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-3 skill-col">
                                 <h3 class="skills-head project-detail">Skills Used</h3>
                                 <ul class="skills">
                                     <li class="project-skill">
@@ -435,14 +439,14 @@
                             </div>
                             <div class="col-sm-6 project-details">
                                 <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent">TweetMe is a Twitter feed application that I developed in my free time. The primary goal of this project was to create an application to pull in a controllable number of statuses from a Twitter user's public timeline.</p>
-                                <p class="indent last-paragraph">This application retrieves the statuses via the Twitter REST API, then caches the JSON responses to a flat file 15 minutes to avoid the Twitter API rate limits. Next, TweetMe repackages the cached JSON response to filter out unneeded properties and then outputs the repackaged timeline in either JSON or formatted HTML.</p>
+                                <p class="indent project-case-p">TweetMe is a Twitter feed application that I developed in my free time. The primary goal of this project was to create an application to pull in a controllable number of statuses from a Twitter user's public timeline.</p>
+                                <p class="indent project-case-p last-paragraph">This application retrieves the statuses via the Twitter REST API, then caches the JSON responses to a flat file 15 minutes to avoid the Twitter API rate limits. Next, TweetMe repackages the cached JSON response to filter out unneeded properties and then outputs the repackaged timeline in either JSON or formatted HTML.</p>
                                 <p class="text-center">
                                     <a class="btn info-button" target="_BLANK" href="http://tweetme.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
                                     <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/tweetme"><i class="fa fa-github"></i> GitHub</a>
                                 </p>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-3 skill-col">
                                 <h3 class="skills-head project-detail">Skills Used</h3>
                                 <ul class="skills">
                                     <li class="project-skill">
@@ -546,8 +550,8 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <p class="text-center">Copyright 2015 &copy; Justin Christenson.</p>
-                <p class="text-center">All rights reserved.</p>
+                <p class="text-center">Copyright 2015 &copy; Justin Christenson. <br/>
+                All rights reserved.</p>
             </div>
         </div>
     </div>

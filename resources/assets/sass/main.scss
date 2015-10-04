@@ -1,9 +1,94 @@
 $orange: #f05f40;
+$darkOrange: #ac3c24;
 $error: #ba0000;
 
 body {
   margin: 0;
   color: #222;
+}
+
+@media (min-width: 1200px) {
+  .circular {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .circular {
+    width: 176px;
+    height: 176px;
+    border-radius: 88px;
+    -webkit-border-radius: 88px;
+    -moz-border-radius: 88px;
+  }
+  div.vcard.contact {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px){
+  .circular {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    margin: 0 auto;
+  }
+
+  .skill-col {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  h2.project-title,
+  h3.project-case-study,
+  p.project-case-p,
+  div.vcard.contact,
+  .skills-head,
+  div#bio-text p {
+    text-align: center;
+  }
+
+
+  #contact button#contact-btn {
+    width: 100%;
+    padding: 1em;
+  }
+}
+
+@media (min-width: 970px) {
+  h1.home-head {
+    font-size: 5.25em;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 970px) {
+  h1.home-head {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 561px) and (max-width: 749px) {
+  h1.home-head {
+    font-size: 3.4em;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 560px) {
+  h1.home-head {
+    font-size: 3.2em;
+  }
+}
+
+@media (max-width: 380px) {
+  h1.home-head {
+    font-size: 3em;
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -17,8 +102,11 @@ h1, h2, h3, h4, h5 {
   max-width: 1920px;
   position: relative;
 
+  .head-container {
+    margin-top: 15%;
+  }
+
   h1.home-head {
-    font-size: 5.25em;
     background-color: rgba(0, 0, 0, 0.9);
     line-height: 1.425em;
     display: inline;
@@ -27,11 +115,8 @@ h1, h2, h3, h4, h5 {
   h1.home-head span {
     padding: 0.2em;
   }
-
-  .head-container {
-    margin-top: 15%;
-  }
 }
+
 
 #about {
   font-size: 1.125em;
@@ -40,11 +125,6 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   max-width: 1920px;
   position: relative;
-
-  #bio-image {
-    background: url('/img/justin-headshot-250.jpg') no-repeat;
-    border: 6px solid rgba(255, 255, 255, 1);
-  }
 
   #skillset {
     background: #fff;
@@ -60,36 +140,21 @@ h1, h2, h3, h4, h5 {
     line-height: 1.725em;
   }
 
+  #bio-image {
+    background: url('/img/justin-headshot-250.jpg') no-repeat;
+    border: 6px solid rgba(255, 255, 255, 1);
+    background-size: 100%;
+  }
 
   ul.skills {
-    padding-left: 20px;
     width: 200px;
     display:-moz-inline-stack;
     display:inline-block;
     zoom:1;
+    //IE hackery
     *display:inline;
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
     text-align: left;
-  }
-
-  a:link {
-    color: #222;
-    text-decoration: none;
-  }
-
-  a:active {
-    color: #000;
-    text-decoration: underline;
-  }
-
-  a:hover {
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  a:visited {
-    color: #000;
-    text-decoration: none;
   }
 }
 
@@ -105,23 +170,26 @@ h1, h2, h3, h4, h5 {
     padding: 1.25em;
   }
 
+  ul.skills {
+    padding-left: 1em;
+  }
   a:link {
     color: $orange;
     text-decoration: none;
   }
 
   a:hover {
-    color: $orange;
+    color: $darkOrange;
     text-decoration: underline;
   }
 
   a:active {
-    color: #222;
+    color: $darkOrange;
     text-decoration: none;
   }
 
   a:visited {
-    color: #222;
+    color: $darkOrange;
     text-decoration: none;
   }
 }
@@ -162,11 +230,14 @@ h1, h2, h3, h4, h5 {
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines;
   }
+
   #social-media a {
     vertical-align: top;
     display: inline-block;
+    //IE hackery
     *display: inline;
     zoom: 1;
+    margin-bottom: 0.5em;
   }
   .distribute {
     width: 100%;
@@ -211,14 +282,6 @@ nav.navbar-inverse {
   background-image: none;
   background-color: rgba(0, 0, 0, 0.75);
   border: 0 none;
-}
-
-.circular {
-  width: 250px;
-  height: 250px;
-  border-radius: 125px;
-  -webkit-border-radius: 125px;
-  -moz-border-radius: 125px;
 }
 
 ul.skills li:before, ul.project-skill li:before {

@@ -20,7 +20,7 @@ body {
   div.vcard.contact {
     text-align: center; } }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .circular {
     width: 200px;
     height: 200px;
@@ -28,6 +28,8 @@ body {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     margin: 0 auto; }
+  #about div#bio-text {
+    padding-left: 0px; }
   .skill-col {
     width: 250px;
     margin: 0 auto; }
@@ -93,7 +95,7 @@ h1, h2, h3, h4, h5 {
   #about #bio {
     padding: 2em 0 4em 0; }
   #about #bio-text {
-    padding-left: 2em;
+    padding-left: 3em;
     line-height: 1.725em; }
   #about #bio-image {
     background: url("/img/justin-headshot-250.jpg") no-repeat;

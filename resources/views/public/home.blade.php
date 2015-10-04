@@ -561,12 +561,10 @@
 
 <!-- Begin Footer -->
 <footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <p class="text-center">Copyright 2015 &copy; Justin Christenson. <br/>
-                All rights reserved.</p>
-            </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <p class="text-center">Copyright 2015 &copy; Justin Christenson. <br/>
+            All rights reserved.</p>
         </div>
     </div>
 </footer>

@@ -1,5 +1,6 @@
 var justinc = window.justinc || {};
 justinc.contactForm = window.justinc.contactForm || {};
+
 //Cache the window object
 var $window = $(window);
 
@@ -17,7 +18,7 @@ justinc.setHomeHeight = function()
  */
 window.addEventListener("orientationchange", function() {
     justinc.setHomeHeight();
-}, false);
+});
 
 /**
  * Reset home page's height to 100% on window resize
@@ -25,7 +26,7 @@ window.addEventListener("orientationchange", function() {
 
 window.addEventListener("resize", function() {
     justinc.setHomeHeight();
-}, false);
+});
 
 /**
  * Auto close mobile nav when link is clicked
@@ -96,6 +97,34 @@ $('form#contact-form').submit(function(e)
     e.preventDefault();
 });
 
+/**
+ * Hide scroll down icon when not on homepage.
+ */
+$(window).scroll(function() {
+    $downArrow = $("a#scroll-down");
+    $downArrow.css({
+        display: 'inline'
+    });
+    if ($(this).scrollTop() > $('section#home').height()) {
+        $downArrow.css({
+            'display': 'none'
+        });
+    }
+});
+
+/**
+ * Use jQuery easing plugin for smooth scrolling.
+ */
+$('a.scroll').on('click', function(e) {
+
+    var $jThis = $(this);
+
+    $('html, body').stop().animate({
+        scrollTop: $($jThis.attr('href')).offset().top
+    }, 1000, 'easeInOutExpo');
+    e.preventDefault();
+});
+
 $(document).ready(function(){
 
     //Fire setHomeHeight method
@@ -104,11 +133,12 @@ $(document).ready(function(){
     //Fire autoHyphenate method
     justinc.contactForm.autoHyphenate();
 
-
-
-    //Parallax scrolling
+    //Activate parallax scrolling.
     $('section[data-type="background"]').each(function(){
+
+        //Cache $(this)
         var $jThis = $(this);
+
         $(window).scroll(function() {
             var yPos = -($window.scrollTop() / $jThis.data('speed'));
             var coords = '50% '+ yPos + 'px';
@@ -118,27 +148,6 @@ $(document).ready(function(){
         });
     });
 
-    //Hide scroll down icon when not on homepage
-    $(window).scroll(function() {
-        $downArrow = $("a#scroll-down");
-        $downArrow.css({
-            display: 'inline'
-        });
-        if ($(this).scrollTop() > $('section#home').height()) {
-            $downArrow.css({
-                'display': 'none'
-            });
-        }
-    });
-
-    //Smooth Scrolling
-    $('a.scroll').on('click', function(e) {
-        var a = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $(a.attr('href')).offset().top
-        }, 1000, 'easeInOutExpo');
-        e.preventDefault();
-    });
-
+    //Instantiate WOW plugin for revealing animations while scrolling.
     new WOW().init();
 });

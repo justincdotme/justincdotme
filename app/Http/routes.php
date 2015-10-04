@@ -1,9 +1,16 @@
 <?php
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [
+   'as'     => 'home.index',
+    'uses'  => 'HomeController@index'
+]);
 
+Route::post('/contact', [
+    'as'    => 'lead.store',
+    'uses'  => 'LeadController@store'
+]);
+
+/*
 //Import Dingo API router.
 use Dingo\Api\Facade\Route;
 
@@ -49,10 +56,10 @@ Route::version('v1', function()
             'except' => ['index']
         ]);
         Route::resource('contact','App\Http\Controllers\LeadController', [
-            'except' => ['index']
+            'except' => ['index', 'store']
         ]);
         Route::resource('portfolio','App\Http\Controllers\PortfolioController', [
             'except' => ['index', 'show']
         ]);
     });
-});
+});*/

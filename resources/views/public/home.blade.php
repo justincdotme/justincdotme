@@ -507,35 +507,49 @@
                             </div>
                         </div>
                         <div class="col-sm-8">
-                            <div class="row contact-errors">
-                                <div class="col-sm-12">
-                                    <div class="alert alert-danger">
-                                        <h1>Error</h1>
-                                        <ul class="messages">
-                                        </ul>
+                            @if($errors->any())
+                                <div class="col-sm-12 alert alert-danger">
+                                    <h1>Error <span class="glyphicon glyphicon-exclamation-sign"></span></h1>
+                                    <ul>
+                                        @foreach($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            @if(!$contacted)
+                                <div class="row contact-errors">
+                                    <div class="col-sm-12">
+                                        <div class="alert alert-danger">
+                                            <h1>Error</h1>
+                                            <ul class="messages">
+
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <form action="/contact" id="contact-form" method="POST">
-                                <input type="hidden" value="UwLmBxEm8ll8V2hBagIF6tiYGZWfRCs4mMTBCYcf" name="_token">
-                                <div class="form-group">
-                                    <label for="name">Name</label><br>
-                                    <input type="text" placeholder="Luke Skywalker" required="" value="" name="name" class="form-control required">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label><br>
-                                    <input type="email" placeholder="rebels@hoth.com" required="" value="" name="email" class="form-control required">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number</label><br>
-                                    <input type="text" placeholder="555-555-5555" value="" maxlength="12" name="phone" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label><br>
-                                    <textarea required=""  placeholder="Message" rows="10" class="form-control required" name="message"></textarea>
-                                </div>
-                                <button id="contact-btn" class="btn info-button btn-lg" type="submit">Contact</button>
-                            </form>
+                                {!! Form::open(['route' => 'lead.store', 'action' => 'POST', 'id' => 'contact-form']) !!}
+                                    <div class="form-group">
+                                        <label for="name">Name</label><br>
+                                        <input type="text" placeholder="Full Name" required="" value="" name="name" class="form-control required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label><br>
+                                        <input type="email" placeholder="email@address.com" required="" value="" name="email" class="form-control required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label><br>
+                                        <input type="text" placeholder="555-555-5555" value="" maxlength="12" name="phone" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">What can I do for you?</label><br>
+                                        <textarea required=""  placeholder="What can I do for you?" rows="10" class="form-control required" name="message"></textarea>
+                                    </div>
+                                    <button id="contact-btn" class="btn info-button btn-lg" type="submit">Contact</button>
+                                {!! Form::close() !!}
+                            @else
+                                <h1>Thank you, I will contact you soon!</h1>
+                            @endif
                         </div>
                     </div>
                 </div>

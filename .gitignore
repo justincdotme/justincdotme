@@ -3,6 +3,6 @@
 .env
 /.idea
 /public/justin-christenson-resume.pdf
+/public/build
 /public/js
 /public/css
-/public/build

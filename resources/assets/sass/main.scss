@@ -65,6 +65,7 @@ body {
   }
 }
 
+/* Homepage header media queries */
 @media (min-width: 970px) {
   h1.home-head {
     font-size: 5.25em;
@@ -95,6 +96,7 @@ body {
   }
 }
 
+/* Main styles */
 h1, h2, h3, h4, h5 {
   font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
 }
@@ -205,12 +207,13 @@ h1, h2, h3, h4, h5 {
   max-width: 1920px;
   position: relative;
 
+  //Hide contact error div by default
   div.contact-errors {
     display: none;
   }
 
   .contact-form-error {
-    border: 2px solid red;
+    border: 2px solid $error;
   }
 }
 
@@ -286,12 +289,6 @@ ul.skills {
   padding-top: 50px !important;
 }
 
-nav.navbar-inverse {
-  background-image: none;
-  background-color: rgba(0, 0, 0, 0.75);
-  border: 0 none;
-}
-
 ul.skills li:before, ul.project-skill li:before {
   font-family: 'FontAwesome';
   content: "\f054";
@@ -312,7 +309,7 @@ ul.skills li:before, ul.project-skill li:before {
   text-indent: 1.25em;
 }
 
-/*Scroll Down Animation*/
+/* Scroll Down Animation */
 a#scroll-down {
   @-moz-keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
@@ -381,7 +378,13 @@ a#scroll-down {
   }
 }
 
-/*Bootstrap Overrides*/
+/* Bootstrap Overrides */
+nav.navbar-inverse {
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 0 none;
+}
+
 .thumbnail {
   background: none;
   border: none;

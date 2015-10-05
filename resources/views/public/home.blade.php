@@ -206,265 +206,55 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="project-container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="project-title"><a target="_BLANK" href="http://fawkesfx.com">FawkesFX</a></h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumbnail">
-                                    <a target="_BLANK" href="http://fawkesfx.com">
-                                        <img class="deferred" alt="FawkesFX Website Screenshot" data-src="/img/portfolio/fawkesfx-shot.jpg" src="/img/portfolio/fawkesfx-shot.jpg">
-                                    </a>
+                    @foreach($projects as $project)
+                        <div class="project-container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h2 class="project-title"><a target="_BLANK" href="{{ $project->live_url }}">{{ $project->name }}</a></h2>
                                 </div>
                             </div>
-                            <div class="col-sm-6 project-details">
-                                <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent project-case-p">Fawkes FX is a small creative firm located in Portland, OR that I helped establish. We required a public website to showcase our services. The website also reuired a private administration interface with transactional email integration.</p>
-                                <p class="indent project-case-p last-paragraph">The front end team at FawkesFX designed and built the public website, which I merged into a Laravel 4 application. I then designed and developed the administration interface featuring several custom modules including a user management module, an SEO module and a leads management module.</p>
-                                <p class="text-center">
-                                    <a class="btn info-button" target="_BLANK" href="http://fawkesfx.com"><span class="glyphicon glyphicon-link"></span> Website</a>
-                                </p>
-                            </div>
-                            <div class="col-sm-3 skill-col">
-                                <h3 class="skills-head project-detail">Skills Used</h3>
-                                <ul class="skills">
-                                    <li class="project-skill">
-                                        Laravel 4
-                                    </li>
-                                    <li class="project-skill">
-                                        Object Oriented PHP
-                                    </li>
-                                    <li class="project-skill">
-                                        MySQL
-                                    </li>
-                                    <li class="project-skill">
-                                        JavaScript &amp; jQuery
-                                    </li>
-                                    <li class="project-skill">
-                                        HTML / CSS
-                                    </li>
-                                    <li class="project-skill">
-                                        Web Server Administration
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="project-title"><a target="_BLANK" href="http://reliablemobilelabs.com">Reliable Mobile Labs</a></h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumbnail">
-                                    <a target="_BLANK" href="http://reliablemobilelabs.com">
-                                        <img class="deferred" alt="Reliable Mobile Labs Website Screenshot" data-src="/img/portfolio/reliableMobileLabs-shot.jpg" src="/img/portfolio/reliableMobileLabs-shot.jpg">
-                                    </a>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="thumbnail">
+                                        <a target="_BLANK" href="{{ $project->live_url }}">
+                                            <img alt="{{ (is_null($project->images()->first()->alt_text)) ? $project->name : $project->images()->first()->alt_text }}" src="{{ $project->images()->first()->image_path }}">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 project-details">
+                                    <h3 class="project-case-study">Case Study</h3>
+                                    {!! $project->case_study !!}
+                                    @if(!is_null($project->testimonial))
+                                        <h3 class="testimonial-header">Client Testimonial</h3>
+                                        {!! $project->testimonial !!}
+                                    @endif
+                                    <p class="text-center">
+                                        @if(!is_null($project->live_url))
+                                            <a href="{{ $project->live_url }}" target="_BLANK" class="btn info-button"><span class="glyphicon glyphicon-link"></span> Website</a>
+                                        @endif
+
+                                        @if(!is_null($project->admin_url))
+                                                <a href="{{ $project->admin_url }}" target="_BLANK" class="btn info-button"><span class="glyphicon glyphicon-link"></span> Admin Interface</a>
+                                        @endif
+
+                                        @if(!is_null($project->github_url))
+                                                <a href="{{ $project->github_url }}" target="_BLANK" class="btn info-button"><i class="fa fa-github"></i> GitHub</a>
+                                        @endif
+                                    </p>
+                                </div>
+                                <div class="col-sm-3 skill-col">
+                                    <h3 class="skills-head project-detail">Skills Used</h3>
+                                    <ul class="skills">
+                                        @foreach($project->skills()->get() as $skill)
+                                            <li class="project-skill">
+                                                {{ $skill->skill }}
+                                            </li>
+                                        @endforeach
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-6 project-details">
-                                <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent project-case-p">Reliable Mobile Labs is a medical lab testing service with locations in several states. The client required a website to showcase their services, generate leads and allow physicians to log into a portal within the website.</p>
-                                <p class="indent project-case-p last-paragraph">The team at FawkesFX put together the design and concept for this project. I assisted the front end team with client side development using JavaScript, some HTML and CSS. I then created a lead management system using PHP and capped it off with a router to allow for search engine friendly URLs.</p>
-                                <p class="text-center">
-                                    <a class="btn info-button" target="_BLANK" href="http://reliablemobilelabs.com"><span class="glyphicon glyphicon-link"></span> Website</a>
-                                </p>
-                            </div>
-                            <div class="col-sm-3 skill-col">
-                                <h3 class="skills-head project-detail">Skills Used</h3>
-                                <ul class="skills">
-                                    <li class="project-skill">
-                                        Object Oriented PHP
-                                    </li>
-                                    <li class="project-skill">
-                                        JavaScript &amp; jQuery
-                                    </li>
-                                    <li class="project-skill">
-                                        HTML / CSS
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-                    </div>
-                    <div class="project-container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="project-title"><a target="_BLANK" href="http://www.belssage.com">Belssage</a></h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumbnail">
-                                    <a target="_BLANK" href="http://www.belssage.com">
-                                        <img class="deferred" alt="Belssage Massage Therapy Website Screenshot" data-src="/img/portfolio/belssage-shot.jpg" src="/img/portfolio/belssage-shot.jpg">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 project-details">
-                                <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent project-case-p">Belssage is a massage therapy provider in Rapid City, SD. This project required a contact form for appointment scheduling, publishing of a quarterly newsletter, easy page updates and a list &amp; description of provided services.</p>
-                                <p class="indent project-case-p last-paragraph">I designed the website using Photoshop and built the WordPress theme using HTML, CSS, PHP and JavaScript.</p>
-                                <p class="text-center">
-                                    <a class="btn info-button" target="_BLANK" href="http://www.belssage.com"><span class="glyphicon glyphicon-link"></span> Website</a>
-                                </p>
-                            </div>
-                            <div class="col-sm-3 skill-col">
-                                <h3 class="skills-head project-detail">Skills Used</h3>
-                                <ul class="skills">
-                                    <li class="project-skill">
-                                        Wordpress Theme Development
-                                    </li>
-                                    <li class="project-skill">
-                                        Object Oriented PHP
-                                    </li>
-                                    <li class="project-skill">
-                                        JavaScript &amp; jQuery
-                                    </li>
-                                    <li class="project-skill">
-                                        HTML / CSS (SCSS)
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="project-title"><a target="_BLANK" href="http://bookme.demos.justinc.me">bookMe</a></h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumbnail">
-                                    <a target="_BLANK" href="http://bookme.demos.justinc.me">
-                                        <img class="deferred" alt="bookMe Website Screenshot" data-src="/img/portfolio/bookme-shot.jpg" src="/img/portfolio/bookme-shot.jpg">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 project-details">
-                                <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent project-case-p">bookMe is a personal project that I built in my free time using PHP5 and MySQL. The goal of this project was to create a fully functional property booking application from scratch using MVC architecture.</p>
-                                <p class="indent project-case-p last-paragraph">The public site features property listings, a property availability module and a reservation booking module. The administrative interface features a user management module, a reservation management module and a property management module. The property management module comes complete with a rich text editor and image uploader.</p>
-                                <p class="text-center">
-                                    <a class="btn info-button" target="_BLANK" href="http://bookme.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
-                                    <a class="btn info-button" target="_BLANK" href="http://bookme.demos.justinc.me/admin"><span class="glyphicon glyphicon-link"></span> Demo Admin Interface</a>
-                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/bookme"><i class="fa fa-github"></i> GitHub</a>
-                                </p>
-                            </div>
-                            <div class="col-sm-3 skill-col">
-                                <h3 class="skills-head project-detail">Skills Used</h3>
-                                <ul class="skills">
-                                    <li class="project-skill">
-                                        Object Oriented PHP
-                                    </li>
-                                    <li class="project-skill">
-                                        MySQL
-                                    </li>
-                                    <li class="project-skill">
-                                        ORM (Eloquent)
-                                    </li>
-                                    <li class="project-skill">
-                                        JavaScript &amp; jQuery
-                                    </li>
-                                    <li class="project-skill">
-                                        HTML / CSS (SCSS)
-                                    </li>
-                                    <li class="project-skill">
-                                        API Consumption
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="project-title"><a target="_BLANK" href="http://findmyisp.demos.justinc.me">FindMyISP</a></h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumbnail">
-                                    <a target="_BLANK" href="http://findmyisp.demos.justinc.me">
-                                        <img class="deferred" alt="FindMyISP Website Screenshot" data-src="/img/portfolio/findmyisp-shot.jpg" src="/img/portfolio/findmyisp-shot.jpg">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 project-details">
-                                <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent project-case-p">FindMyISP is a personal project that I built in my free time. The primary goals of this project were to inform a user of who their current ISP is and display other ISP options in the user's area.</p>
-                                <p class="indent project-case-p last-paragraph">The application utilizes the HTML5 Geolocation API to get the user's current location and then uses the IpInfo API to obtain the users ISP. The IpInfo API is also used as a geolocation fallback, should the user's browser not support geolocation. The application then uses the Google Places Web Services API to determine nearby ISPs.</p>
-                                <p class="text-center">
-                                    <a class="btn info-button" target="_BLANK" href="http://findmyisp.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
-                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/findmyisp"><i class="fa fa-github"></i> GitHub</a>
-                                </p>
-                            </div>
-                            <div class="col-sm-3 skill-col">
-                                <h3 class="skills-head project-detail">Skills Used</h3>
-                                <ul class="skills">
-                                    <li class="project-skill">
-                                        Object Oriented PHP
-                                    </li>
-                                    <li class="project-skill">
-                                        JavaScript &amp; jQuery
-                                    </li>
-                                    <li class="project-skill">
-                                        HTML / CSS (SCSS)
-                                    </li>
-                                    <li class="project-skill">
-                                        API Consumption
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="project-title"><a target="_BLANK" href="http://tweetme.demos.justinc.me">TweetMe</a></h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumbnail">
-                                    <a target="_BLANK" href="http://tweetme.demos.justinc.me">
-                                        <img class="deferred" alt="TweetMe Website Screenshot" data-src="/img/portfolio/tweetme-shot.jpg" src="/img/portfolio/tweetme-shot.jpg">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 project-details">
-                                <h3 class="project-case-study">Case Study</h3>
-                                <p class="indent project-case-p">TweetMe is a Twitter feed application that I developed in my free time. The primary goal of this project was to create an application to pull in a controllable number of statuses from a Twitter user's public timeline.</p>
-                                <p class="indent project-case-p last-paragraph">This application retrieves the statuses via the Twitter REST API, then caches the JSON responses to a flat file 15 minutes to avoid the Twitter API rate limits. Next, TweetMe repackages the cached JSON response to filter out unneeded properties and then outputs the repackaged timeline in either JSON or formatted HTML.</p>
-                                <p class="text-center">
-                                    <a class="btn info-button" target="_BLANK" href="http://tweetme.demos.justinc.me"><span class="glyphicon glyphicon-link"></span> Demo Website</a>
-                                    <a class="btn info-button" target="_BLANK" href="https://github.com/justincdotme/tweetme"><i class="fa fa-github"></i> GitHub</a>
-                                </p>
-                            </div>
-                            <div class="col-sm-3 skill-col">
-                                <h3 class="skills-head project-detail">Skills Used</h3>
-                                <ul class="skills">
-                                    <li class="project-skill">
-                                        Object Oriented PHP
-                                    </li>
-                                    <li class="project-skill">
-                                        JavaScript &amp; jQuery
-                                    </li>
-                                    <li class="project-skill">
-                                        HTML / CSS (SCSS)
-                                    </li>
-                                    <li class="project-skill">
-                                        API Consumption
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -490,16 +280,16 @@
                                     <hr class="orange-hr"/>
                                     <div id="social-media">
                                         <a target="_BLANK" href="https://twitter.com/justincdotme">
-                                            <img data-src="/img/ico/twitter-64.jpg" src="/img/ico/twitter-64.jpg" class="deferred">
+                                            <img src="/img/ico/twitter-64.jpg">
                                         </a>
                                         <a target="_BLANK" href="https://plus.google.com/115474380698631066615/posts">
-                                            <img data-src="/img/ico/google-plus-64.jpg" src="/img/ico/google-plus-64.jpg" class="deferred">
+                                            <img src="/img/ico/google-plus-64.jpg">
                                         </a>
                                         <a target="_BLANK" href="https://www.linkedin.com/pub/justin-christenson/1a/175/ab2">
-                                            <img data-src="/img/ico/linkedin-64.jpg" src="/img/ico/linkedin-64.jpg" class="deferred">
+                                            <img src="/img/ico/linkedin-64.jpg">
                                         </a>
                                         <a target="_BLANK" href="https://github.com/justincdotme">
-                                            <img data-src="/img/ico/github_64.png" src="/img/ico/github_64.png" class="deferred">
+                                            <img src="/img/ico/github_64.png">
                                         </a>
                                         <span class="distribute"></span>
                                     </div>
@@ -561,12 +351,10 @@
 
 <!-- Begin Footer -->
 <footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <p class="text-center">Copyright 2015 &copy; Justin Christenson. <br/>
-                All rights reserved.</p>
-            </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <p class="text-center">Copyright 2015 &copy; Justin Christenson. <br/>
+            All rights reserved.</p>
         </div>
     </div>
 </footer>

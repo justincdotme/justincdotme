@@ -104,8 +104,7 @@ class LeadController extends Controller
             if($request->ajax())
             {
                 return response()->json([
-                    'status' => 'error',
-                    'msg'    => $e
+                    'status' => 'error'
                 ]);
             }
             return redirect('/#contact')->withInput($request->all());

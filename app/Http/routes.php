@@ -10,7 +10,7 @@ Route::post('/contact', [
     'uses'  => 'LeadController@store'
 ]);
 
-/*
+
 //Import Dingo API router.
 use Dingo\Api\Facade\Route;
 
@@ -62,4 +62,4 @@ Route::version('v1', function()
             'except' => ['index', 'show']
         ]);
     });
-});*/
+});

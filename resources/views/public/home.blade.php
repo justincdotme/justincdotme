@@ -132,7 +132,6 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <h1 class="white text-center">About Me</h1>
-                            <hr class="short-hr"/>
                         </div>
                     </div>
                     <div class="circular col-sm-3 wow rollIn" id="bio-image"></div>

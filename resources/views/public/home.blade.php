@@ -116,7 +116,8 @@
                 <h1 class="home-head white"><span><span>Justin Christenson is a</span><br/><span class="orange">Web Developer</span><br/><span>in Vancouver, WA.</span></span></h1>
             </div>
             <a href="#about" id="scroll-down" class="scroll">
-                <div class="arrow bounce"></div>
+                <i class="fa fa-chevron-down arrow top-arrow bounce"></i>
+                <i class="fa fa-chevron-down arrow bounce"></i>
             </a>
         </div>
     </div>

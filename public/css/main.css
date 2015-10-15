@@ -209,10 +209,6 @@ ul.skills li:before, ul.project-skill li:before {
   margin: 0 5px 0 -15px;
   color: #f05f40; }
 
-.short-hr {
-  max-width: 50px;
-  border-width: 3px; }
-
 .orange-hr {
   border-color: #f05f40; }
 
@@ -289,7 +285,14 @@ ul.dropdown-menu {
   border: none; }
   ul.dropdown-menu li > a {
     color: #fff; }
-  ul.dropdown-menu li > a:hover, ul.dropdown-menu .dropdown-menu li > a:focus, ul.dropdown-menu .dropdown-submenu:hover > a {
+  ul.dropdown-menu li.active a,
+  ul.dropdown-menu li.active a:active,
+  ul.dropdown-menu li.active a:focus,
+  ul.dropdown-menu li.active a:hover {
+    background-color: #222; }
+  ul.dropdown-menu li > a:hover,
+  ul.dropdown-menu .dropdown-menu li > a:focus,
+  ul.dropdown-menu .dropdown-submenu:hover > a {
     background-image: none;
     background-color: #222;
     color: #eee; }

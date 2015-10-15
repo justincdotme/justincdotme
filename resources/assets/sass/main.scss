@@ -164,24 +164,23 @@ h1, h2, h3, h4, h5 {
   ul.skills {
     padding-left: 1em;
   }
-  a:link {
-    color: $orange;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: $darkOrange;
-    text-decoration: underline;
-  }
-
-  a:active {
-    color: $darkOrange;
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: $darkOrange;
-    text-decoration: none;
+  a {
+    &:link {
+      color: $orange;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $darkOrange;
+      text-decoration: underline;
+    }
+    &:active {
+      color: $darkOrange;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $darkOrange;
+      text-decoration: none;
+    }
   }
 }
 
@@ -279,11 +278,6 @@ ul.skills li:before, ul.project-skill li:before {
   content: "\f054";
   margin:0 5px 0 -15px;
   color: $orange;
-}
-
-.short-hr {
-  max-width: 50px;
-  border-width: 3px;
 }
 
 .orange-hr {
@@ -399,7 +393,18 @@ ul.dropdown-menu {
   li > a {
     color: #fff;
   }
-  li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+  li.active{
+    a,
+    a:active,
+    a:focus,
+    a:hover{
+      background-color: #222;
+    }
+  }
+
+  li > a:hover,
+  .dropdown-menu li > a:focus,
+  .dropdown-submenu:hover > a {
     background-image: none;
     background-color: #222;
     color: #eee;

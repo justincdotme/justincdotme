@@ -125,9 +125,11 @@ $('a.scroll').on('click', function(e) {
     e.preventDefault();
 });
 
+
+
 $(document).ready(function(){
 
-    //Fire setHomeHeight method
+    //Set homepage height to 100% of window height
     justinc.setHomeHeight();
 
     //Fire autoHyphenate method

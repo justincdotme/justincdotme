@@ -5,7 +5,6 @@ elixir(function(mix) {
     mix.scripts([
         '/bower/jquery/dist/jquery.js',
         '/bower/bootstrap/dist/js/bootstrap.js',
-        '/bower/angular/angular.js',
         '/bower/jquery-easing-original/jquery.easing.js',
         '/bower/angular/angular.min.js',
         '/bower/Flowtype.js/flowtype.js',

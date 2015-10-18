@@ -35,7 +35,10 @@ justinc.setHomeHeight = function()
  * Reset home page's height to 100% on orientation change
  */
 window.addEventListener("orientationchange", function() {
+    //Fire homeHeight method
     justinc.setHomeHeight();
+    //Fire parallax scrolling method
+    justinc.parallaxScrolling();
 });
 
 /**
@@ -43,7 +46,10 @@ window.addEventListener("orientationchange", function() {
  */
 
 window.addEventListener("resize", function() {
+    //Fire homeHeight method
     justinc.setHomeHeight();
+    //Fire parallax scrolling method
+    justinc.parallaxScrolling();
 });
 
 /**
@@ -143,7 +149,36 @@ $('a.scroll').on('click', function(e) {
     e.preventDefault();
 });
 
-
+/**
+ * Reset the background position
+ */
+justinc.resetBackground = function(c)
+{
+    c.css('background-position', '0px 0px');
+    if($window.width() >= 760) {
+        c.css('background-position', '50% 0px');
+    }
+};
+/**
+ * Activate parallax scrolling.
+ */
+justinc.parallaxScrolling = function()
+{
+    $('section[data-type="background"]').each(function(){
+        //Cache $(this)
+        var $jThis = $(this);
+        justinc.resetBackground($jThis);
+        $window.scroll(function() {
+            if($(window).width() >= 760) {
+                var yPos = -($window.scrollTop() / $jThis.data('speed'));
+                var coords = '50% '+ yPos + 'px';
+                $jThis.css({
+                    backgroundPosition: coords
+                });
+            }
+        });
+    });
+};
 
 $(document).ready(function(){
 
@@ -153,20 +188,8 @@ $(document).ready(function(){
     //Fire autoHyphenate method
     justinc.contactForm.autoHyphenate();
 
-    //Activate parallax scrolling.
-    $('section[data-type="background"]').each(function(){
-
-        //Cache $(this)
-        var $jThis = $(this);
-
-        $(window).scroll(function() {
-            var yPos = -($window.scrollTop() / $jThis.data('speed'));
-            var coords = '50% '+ yPos + 'px';
-            $jThis.css({
-                backgroundPosition: coords
-            });
-        });
-    });
+    //Fire parallax scrolling method
+    justinc.parallaxScrolling();
 
     //Instantiate WOW plugin for revealing animations while scrolling.
     new WOW().init();

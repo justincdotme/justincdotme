@@ -195,7 +195,7 @@
 <!-- End About Page -->
 
 <!-- Begin Portfolio Page -->
-<section id="portfolio-wrapper" data-type="background" data-speed="10" class="pages">
+<section id="portfolio-wrapper" data-type="background" data-speed="5" class="pages">
     <div class="white-bg buffer-top" id="portfolio">
         <div class="container">
             <div class="row">
@@ -264,7 +264,7 @@
 <!-- End Portfolio Page -->
 
 <!-- Begin Contact Page -->
-<section id="contact-wrapper" data-type="background" data-speed="10" class="pages">
+<section id="contact-wrapper" data-type="background" data-speed="2" class="pages">
     <div class="white-bg buffer-top" id="contact">
         <div class="container">
             <div class="row">

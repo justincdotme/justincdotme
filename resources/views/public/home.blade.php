@@ -136,7 +136,7 @@
                         </div>
                     </div>
                     <div class="circular col-sm-3 wow rollIn" id="bio-image"></div>
-                    <div class="col-sm-9" id="bio-text">
+                    <div class="col-sm-9 flowtype" id="bio-text">
                         <p class="indent white">I'm a web developer, open source enthusiast and Jedi Apprentice living in beautiful Vancouver, WA. I started my career as a front end developer after earning a degree in Web Design and Interactive Media in 2011.</p>
                         <p class="indent white">I worked as a front end developer after graduation and soon realized that I also enjoy working on the server side. At this point, I began teaching myself back end development on a LAMP stack in my free time while continuing to work primarily as a front end developer.</p>
                         <p class="indent white">I currently work as a freelance web developer creating websites using HTML, CSS, PHP, and MySQL. I also enjoy using Laravel and WordPress to create advanced websites and applications.</p>
@@ -159,7 +159,7 @@
                 <div class="col-sm-4 text-center">
                     <i class="fa fa-4x fa-desktop wow rollIn orange text-center"></i>
                     <h3>Front End</h3>
-                    <ul class="skills">
+                    <ul class="skills flowtype">
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JavaScript</li>
@@ -169,7 +169,7 @@
                 <div class="col-sm-4 text-center">
                     <i class="fa fa-4x fa-database wow rollIn orange text-center"></i>
                     <h3>Back End</h3>
-                    <ul class="skills">
+                    <ul class="skills flowtype">
                         <li>PHP (Object Oriented)</li>
                         <li>SQL (MySQL)</li>
                         <li>WordPress</li>
@@ -180,7 +180,7 @@
                 <div class="col-sm-4 text-center">
                     <i class="fa fa-4x fa-wrench wow rollIn orange text-center"></i>
                     <h3>Tools</h3>
-                    <ul class="skills">
+                    <ul class="skills flowtype">
                         <li>Adobe Photoshop</li>
                         <li>PhpStorm</li>
                         <li>Git</li>
@@ -222,7 +222,9 @@
                                 </div>
                                 <div class="col-sm-6 project-details">
                                     <h3 class="project-case-study">Case Study</h3>
-                                    {!! $project->case_study !!}
+                                    <div class="flowtype-sm">
+                                        {!! $project->case_study !!}
+                                    </div>
                                     @if(!is_null($project->testimonial))
                                         <h3 class="testimonial-header">Client Testimonial</h3>
                                         {!! $project->testimonial !!}
@@ -243,7 +245,7 @@
                                 </div>
                                 <div class="col-sm-3 skill-col">
                                     <h3 class="skills-head project-detail">Skills Used</h3>
-                                    <ul class="skills">
+                                    <ul class="skills flowtype">
                                         @foreach($project->skills()->get() as $skill)
                                             <li class="project-skill">
                                                 {{ $skill->skill }}

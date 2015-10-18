@@ -4,5 +4,6 @@
 /.idea
 /public/justin-christenson-resume.pdf
 /public/build
-/public/js
+/public/js/scripts.js
+/public/js/scripts.js.map
 /public/css

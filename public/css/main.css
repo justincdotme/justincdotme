@@ -27,7 +27,7 @@ body {
     border-radius: 100px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
-    margin: 0 auto; }
+    margin: 0.5em auto 1.5em auto; }
   #about div#bio-text {
     padding-left: 0px; }
   .skill-col {
@@ -99,8 +99,7 @@ h1, h2, h3, h4, h5 {
   #about #bio {
     padding: 2em 0 4em 0; }
   #about #bio-text {
-    padding-left: 3em;
-    line-height: 1.725em; }
+    padding-left: 3em; }
   #about #bio-image {
     background: url("/img/justin-headshot-250.jpg") no-repeat;
     border: 6px solid white;
@@ -123,6 +122,9 @@ h1, h2, h3, h4, h5 {
   #portfolio-wrapper .project-container {
     margin-bottom: 4.5em;
     padding: 1.25em; }
+  #portfolio-wrapper h3.project-case-study,
+  #portfolio-wrapper h3.skills-head {
+    margin-top: 0; }
   #portfolio-wrapper ul.skills {
     padding-left: 1em; }
   #portfolio-wrapper a:link {

@@ -37,7 +37,7 @@ body {
     border-radius: 100px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
-    margin: 0 auto;
+    margin: 0.5em auto 1.5em auto;
   }
   #about div#bio-text {
     padding-left: 0px;
@@ -128,7 +128,6 @@ h1, h2, h3, h4, h5 {
 
   #bio-text {
     padding-left: 3em;
-    line-height: 1.725em;
   }
 
   #bio-image {
@@ -159,6 +158,11 @@ h1, h2, h3, h4, h5 {
   .project-container {
     margin-bottom: 4.5em;
     padding: 1.25em;
+  }
+
+  h3.project-case-study,
+  h3.skills-head {
+    margin-top: 0;
   }
 
   ul.skills {

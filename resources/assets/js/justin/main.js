@@ -5,6 +5,24 @@ justinc.contactForm = window.justinc.contactForm || {};
 var $window = $(window);
 
 /**
+ * Set FlowType params
+ */
+$('div.flowtype p').flowtype({
+    minimum: 500,
+    maximum: 1200,
+    minFont: 12,
+    maxFont: 18,
+    fontRatio: 30
+});
+$('div.flowtype-sm p, ul.flowtype li').flowtype({
+    minimum: 500,
+    maximum: 1200,
+    minFont: 12,
+    maxFont: 16,
+    fontRatio: 30
+});
+
+/**
  * Set home page's height to 100% window height
  */
 justinc.setHomeHeight = function()

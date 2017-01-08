@@ -48,8 +48,8 @@ class ProjectsTableSeeder extends Seeder
         DB::table('projects')->insert([
             'project_category_id'   => 2,
             'name'                  => 'bookMe',
-            'live_url'              => 'http://bookme.demos.justinc.me',
-            'admin_url'             => 'http://bookme.demos.justinc.me/admin',
+            'live_url'              => 'https://bookme.justinc.me',
+            'admin_url'             => 'https://bookme.justinc.me/admin',
             'github_url'            => 'https://github.com/justincdotme/bookme',
             'case_study'            => '<p class="indent project-case-p">bookMe is a personal project that I built in my free time using PHP5 and MySQL. The goal of this project was to create a fully functional property booking application from scratch using MVC architecture.</p>
                                         <p class="indent project-case-p last-paragraph">The public site features property listings, a property availability module and a reservation booking module. The administrative interface features a user management module, a reservation management module and a property management module. The property management module comes complete with a rich text editor and image uploader.</p>',
@@ -59,8 +59,8 @@ class ProjectsTableSeeder extends Seeder
         DB::table('projects')->insert([
             'project_category_id'   => 2,
             'name'                  => 'fooCart',
-            'live_url'              => 'http://foocart.demos.justinc.me/',
-            'admin_url'             => 'http://foocart.demos.justinc.me/admin',
+            'live_url'              => 'https://foocart.justinc.me/',
+            'admin_url'             => 'https://foocart.justinc.me/admin',
             'github_url'            => 'https://github.com/justincdotme/foocart',
             'case_study'            => '<p class="indent project-case-p">fooCart is a personal project that I built in my free time using Laravel 5. The primary goal was to develop an e-commerce application with shopping cart, inventory management and payment processing integration.</p>
                                         <p class="indent project-case-p last-paragraph">The public site features a JavaScript based inventory display module that uses the Handlebars JS library for client side templating. The public site also features a checkout module with on-site input of payment information. The administration interface features an inventory management module, user management module, slideshow management module and message management module.</p>',
@@ -70,7 +70,7 @@ class ProjectsTableSeeder extends Seeder
         DB::table('projects')->insert([
             'project_category_id'   => 2,
             'name'                  => 'FindMyISP',
-            'live_url'              => 'http://findmyisp.demos.justinc.me/',
+            'live_url'              => 'https://findmyisp.justinc.me/',
             'admin_url'             => null,
             'github_url'            => 'https://github.com/justincdotme/findmyisp',
             'case_study'            => '<p class="indent project-case-p">FindMyISP is a personal project that I built in my free time. The primary goals of this project were to inform a user of who their current ISP is and display other ISP options in the user&#39;s area.</p>
@@ -81,7 +81,7 @@ class ProjectsTableSeeder extends Seeder
         DB::table('projects')->insert([
             'project_category_id'   => 2,
             'name'                  => 'TweetMe',
-            'live_url'              => 'http://tweetme.demos.justinc.me/',
+            'live_url'              => 'http://tweetme.justinc.me/',
             'admin_url'             => null,
             'github_url'            => 'https://github.com/justincdotme/tweetme',
             'case_study'            => '<p class="indent project-case-p">TweetMe is a Twitter feed application that I developed in my free time. The primary goal of this project was to create an application to pull in a controllable number of statuses from a Twitter user&#39;s public timeline.</p>

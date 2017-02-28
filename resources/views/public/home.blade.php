@@ -10,7 +10,7 @@
     <link rel="canonical" href="http://justinc.me"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <meta name="copyright" content="2015 Justin Christenson, Vancouver, WA. All Rights Reserved"/>
+    <meta name="copyright" content="2016 Justin Christenson, Vancouver, WA. All Rights Reserved"/>
     <meta name="author" content="Justin Christenson"/>
     <meta name="city" content="Vancouver"/>
     <meta name="state" content="Washington"/>
@@ -22,8 +22,7 @@
     <meta name="Rating" content="General"/>
     <meta name="format-detection" content="telephone=no"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="vW4bzfGyDJ8ZCah1pLjl2ka-B0NpyFHtgt0WPiF3heA"/>
-
+    <meta name="google-site-verification" content="vW4bzfGyDJ8ZCah1pLjl2ka-B0NpyFHtgt0WPiF3heA" />
     <link rel="apple-touch-icon" sizes="57x57" href="/img/ico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/ico/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/img/ico/apple-icon-72x72.png">
@@ -44,8 +43,8 @@
     <meta name="msapplication-TileImage" content="/img/ico/ms-icon-144x144.png">
     <meta name="theme-color" content="#222222">
 
-    <link rel="author" href="https://plus.google.com/115474380698631066615/posts"/>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link rel="author" href="//plus.google.com/115474380698631066615/posts"/>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
 
@@ -137,10 +136,10 @@
                     </div>
                     <div class="circular col-sm-3 wow rollIn" id="bio-image"></div>
                     <div class="col-sm-9 flowtype" id="bio-text">
-                        <p class="indent white">I'm a web developer, open source enthusiast and Jedi Apprentice living in beautiful Vancouver, WA. I started my career as a front end developer after earning a degree in Web Design and Interactive Media in 2011.</p>
-                        <p class="indent white">I worked as a front end developer after graduation and soon realized that I also enjoy working on the server side. At this point, I began teaching myself back end development on a LAMP stack in my free time while continuing to work primarily as a front end developer.</p>
-                        <p class="indent white">I currently work as a freelance web developer creating websites using HTML, CSS, PHP, and MySQL. I also enjoy using Laravel and WordPress to create advanced websites and applications.</p>
-                    </div>
+                    	<p class="indent white">I'm a web developer, open source enthusiast and Jedi Apprentice living in Vancouver, WA. I started my career as a front end developer while earning a degree in Web Design and Interactive Media in 2011.</p>
+                        <p class="indent white">After working as a front end developer for a while, I started to venture into server side concepts and soon realized that I have a passion for working on all sides of the stack. At this point, I started picking up back end back end projects and learning the LAMP stack. </p>
+                        <p class="indent white">I currently work as a freelance web developer creating websites using HTML, CSS, PHP, MySQL and/or PostgreSQL. I also enjoy using Laravel and Lumen for large mid to large scale applications.</p>
+		    </div>
                 </div>
             </div>
         </div>
@@ -161,20 +160,22 @@
                     <h3>Front End</h3>
                     <ul class="skills flowtype">
                         <li>HTML</li>
-                        <li>CSS</li>
+                        <li>CSS, SCSS</li>
                         <li>JavaScript</li>
+			<li>VueJS</li>
                         <li>jQuery</li>
+			<li>Bootstrap 3</li>
                     </ul>
                 </div>
                 <div class="col-sm-4 text-center">
                     <i class="fa fa-4x fa-database wow rollIn orange text-center"></i>
                     <h3>Back End</h3>
                     <ul class="skills flowtype">
-                        <li>PHP (Object Oriented)</li>
-                        <li>SQL (MySQL)</li>
-                        <li>WordPress</li>
-                        <li>Laravel Framework</li>
-                        <li>Server Administration (LEMP)</li>
+			<li>Object Oriented PHP</li>
+                        <li>MySQL, PostgreSQL</li>
+                        <li>Laravel 4 and 5</li>
+                        <li>LAMP Administration</li>
+			<li>VSphere</li>
                     </ul>
                 </div>
                 <div class="col-sm-4 text-center">
@@ -183,9 +184,10 @@
                     <ul class="skills flowtype">
                         <li>Adobe Photoshop</li>
                         <li>PhpStorm</li>
-                        <li>Git</li>
-                        <li>Gulp</li>
-                        <li>Bower</li>
+                        <li>Git and SVN</li>
+			<li>Composer</li>
+                        <li>Webpack</li>
+			<li>NPM</li>
                     </ul>
                 </div>
             </div>
@@ -322,21 +324,21 @@
                                 {!! Form::open(['route' => 'lead.store', 'action' => 'POST', 'id' => 'contact-form']) !!}
                                     <div class="form-group">
                                         <label for="name">Name</label><br>
-                                        <input type="text" placeholder="Full Name" required="" value="" name="name" class="form-control required">
+                                        <input type="text" placeholder="Full Name" disabled required="" value="" name="name" class="form-control required">
                                     </div>
                                     <div class="form-group">
                                         <label for="email">Email Address</label><br>
-                                        <input type="email" placeholder="email@address.com" required="" value="" name="email" class="form-control required">
+                                        <input type="email" placeholder="email@address.com" disabled required="" value="" name="email" class="form-control required">
                                     </div>
                                     <div class="form-group">
                                         <label for="phone">Phone Number</label><br>
-                                        <input type="text" placeholder="555-555-5555" value="" maxlength="12" name="phone" class="form-control">
+                                        <input type="text" placeholder="555-555-5555" disabled value="" maxlength="12" name="phone" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="message">What can I do for you?</label><br>
-                                        <textarea required=""  placeholder="What can I do for you?" rows="10" class="form-control required" name="message"></textarea>
+                                        <textarea required=""  placeholder="What can I do for you?" disabled rows="10" class="form-control required" name="message"></textarea>
                                     </div>
-                                    <button id="contact-btn" class="btn info-button btn-lg" type="submit">Contact</button>
+                                    <button id="contact-btn" class="btn info-button btn-lg" disabled type="submit">Contact</button>
                                 {!! Form::close() !!}
                             @else
                                 <h1>Thank you, I will contact you soon!</h1>
@@ -354,7 +356,7 @@
 <footer id="footer">
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
-            <p class="text-center">Copyright 2015 &copy; Justin Christenson. <br/>
+            <p class="text-center">Copyright 2016 &copy; Justin Christenson. <br/>
             All rights reserved.</p>
         </div>
     </div>

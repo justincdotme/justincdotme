@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => env('MAIL_DRIVER', 'mail'),
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'host' => env('EMAIL_HOST', 'smtp.mandrillapp.com'),
+    'host' => env('EMAIL_HOST'),
 
     /*
     |--------------------------------------------------------------------------

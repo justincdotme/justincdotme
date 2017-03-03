@@ -69,12 +69,12 @@ class ProjectsTableSeeder extends Seeder
 
         DB::table('projects')->insert([
             'project_category_id'   => 2,
-            'name'                  => 'FindMyISP',
-            'live_url'              => 'https://findmyisp.justinc.me/',
+            'name'                  => 'nearMe',
+            'live_url'              => 'https://nearme.justinc.me/',
             'admin_url'             => null,
-            'github_url'            => 'https://github.com/justincdotme/findmyisp',
-            'case_study'            => '<p class="indent project-case-p">FindMyISP is a personal project that I built in my free time. The primary goals of this project were to inform a user of who their current ISP is and display other ISP options in the user&#39;s area.</p>
-                                        <p class="indent project-case-p last-paragraph">The application utilizes the HTML5 Geolocation API to get the user&#39;s current location and then uses the IpInfo API to obtain the users ISP. The IpInfo API is also used as a geolocation fallback, should the user&#39;s browser not support geolocation. The application then uses the Google Places Web Services API to determine nearby ISPs.</p>',
+            'github_url'            => 'https://github.com/justincdotme/nearme',
+            'case_study'            => '<p class="indent project-case-p">nearMe is a personal project that I built in my free time. The goal of this project is to offer an easy way for EV operators and passengers to search for EV charging stations from their mobile device. I wrote and open sourced a wrapper for the Open Charge Map API as part of this project, called <a target="_BLANK" href="https://github.com/justincdotme/laravel-open-charge"Laravel Open Charge></a>.</p>
+                                        <p class="indent project-case-p last-paragraph">The front end of the application is written using the Vue 2 Javascript framework and it utilizes the HTML5 Geolocation API. The coordinates are passed to the back end where a Lumen powered application then queries the Open Charge API for nearby charging stations. As an enhancement, the front end also allows the user to search for an address. This search feature utilizes the Google Places API for autocomplete and allows user without Geolocation to be able to use the app.</p>',
             'testimonial'           => null
         ]);
 

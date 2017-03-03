@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'host' => env('EMAIL_HOST'),
+    'host' => env('MAIL_HOST'),
 
     /*
     |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'port' => env('EMAIL_PORT', 587),
+    'port' => env('MAIL_PORT', 587),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,8 +55,8 @@ return [
     */
 
     'from' => [
-        'address' => env('FROM_ADDRESS'),
-        'name' => env('EMAIL_NAME')
+        'address' => env('MAIL_FROM_EMAIL'),
+        'name' => env('MAIL_FROM_NAME')
     ],
 
     /*
@@ -83,7 +83,7 @@ return [
     |
     */
 
-    'username' => env('SMTP_USERNAME'),
+    'username' => env('MAIL_USERNAME'),
 
     /*
     |--------------------------------------------------------------------------
@@ -96,7 +96,7 @@ return [
     |
     */
 
-    'password' => env('SMTP_PASS'),
+    'password' => env('MAIL_PASSWORD'),
 
 
     /*

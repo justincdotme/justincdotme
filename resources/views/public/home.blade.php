@@ -324,21 +324,21 @@
                                 {!! Form::open(['route' => 'lead.store', 'action' => 'POST', 'id' => 'contact-form']) !!}
                                     <div class="form-group">
                                         <label for="name">Name</label><br>
-                                        <input type="text" placeholder="Full Name" disabled required="" value="" name="name" class="form-control required">
+                                        <input type="text" placeholder="Full Name" required="" value="" name="name" class="form-control required">
                                     </div>
                                     <div class="form-group">
                                         <label for="email">Email Address</label><br>
-                                        <input type="email" placeholder="email@address.com" disabled required="" value="" name="email" class="form-control required">
+                                        <input type="email" placeholder="email@address.com" required="" value="" name="email" class="form-control required">
                                     </div>
                                     <div class="form-group">
                                         <label for="phone">Phone Number</label><br>
-                                        <input type="text" placeholder="555-555-5555" disabled value="" maxlength="12" name="phone" class="form-control">
+                                        <input type="text" placeholder="555-555-5555" value="" maxlength="12" name="phone" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="message">What can I do for you?</label><br>
-                                        <textarea required=""  placeholder="What can I do for you?" disabled rows="10" class="form-control required" name="message"></textarea>
+                                        <textarea required=""  placeholder="What can I do for you?" rows="10" class="form-control required" name="message"></textarea>
                                     </div>
-                                    <button id="contact-btn" class="btn info-button btn-lg" disabled type="submit">Contact</button>
+                                    <button id="contact-btn" class="btn info-button btn-lg" type="submit">Contact</button>
                                 {!! Form::close() !!}
                             @else
                                 <h1>Thank you, I will contact you soon!</h1>

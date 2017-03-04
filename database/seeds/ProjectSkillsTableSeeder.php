@@ -59,15 +59,8 @@ class ProjectSkillsTableSeeder extends Seeder
 
         DB::table('project_skill')->insert([
             'project_id'    => 3,
-            'skill_id'      => 9
-        ]);
-
-
-        DB::table('project_skill')->insert([
-            'project_id'    => 3,
             'skill_id'      => 3
         ]);
-
 
         DB::table('project_skill')->insert([
             'project_id'    => 3,

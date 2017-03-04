@@ -28,16 +28,10 @@ class SkillsTableSeeder extends Seeder
             'skill' => 'Javascript & jQuery'
         ]);
         DB::table('skills')->insert([
-            'skill' => 'AngularJS'
-        ]);
-        DB::table('skills')->insert([
             'skill' => 'HTML & CSS (SCSS)'
         ]);
         DB::table('skills')->insert([
             'skill' => 'Web Server Administration'
-        ]);
-        DB::table('skills')->insert([
-            'skill' => 'Wordpress Theme Development'
         ]);
         DB::table('skills')->insert([
             'skill' => 'ORM (Eloquent)'

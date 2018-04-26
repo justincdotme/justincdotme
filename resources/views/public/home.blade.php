@@ -137,8 +137,8 @@
                     <div class="circular col-sm-3 wow rollIn" id="bio-image"></div>
                     <div class="col-sm-9 flowtype" id="bio-text">
                     	<p class="indent white">I'm a web developer, open source enthusiast and Jedi Apprentice living in Vancouver, WA. I started my career as a front end developer while earning a degree in Web Design and Interactive Media in 2011.</p>
-                        <p class="indent white">After working as a front end developer for a while, I started to venture into server side concepts and soon realized that I have a passion for working on all sides of the stack. At this point, I started picking up back end back end projects and learning the LAMP stack. </p>
-                        <p class="indent white">I currently work as a freelance web developer creating websites using HTML, CSS, PHP, MySQL and/or PostgreSQL. I also enjoy using Laravel and Lumen for large mid to large scale applications.</p>
+                        <p class="indent white">After working as a front end developer for a while, I started to venture into server side concepts and soon realized that I have a passion for working on all sides of the stack. At this point, I started picking up back end projects and learning the LAMP stack. </p>
+                        <p class="indent white">I currently work as a web developer creating and maintaining dynamic, data driven web applications.</p>
 		    </div>
                 </div>
             </div>

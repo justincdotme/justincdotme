@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Project;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -12,8 +13,7 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('projects')->insert([
-            'project_category_id'   => 1,
+        Project::create([
             'name'                  => 'FawkesFX',
             'live_url'              => 'http://fawkesfx.com',
             'admin_url'             => null,
@@ -23,8 +23,7 @@ class ProjectsTableSeeder extends Seeder
             'testimonial'           => null
         ]);
 
-        DB::table('projects')->insert([
-            'project_category_id'   => 1,
+        Project::create([
             'name'                  => 'Reliable Mobile Labs',
             'live_url'              => 'http://reliablemobilelabs.com',
             'admin_url'             => null,
@@ -34,8 +33,7 @@ class ProjectsTableSeeder extends Seeder
             'testimonial'           => null
         ]);
 
-        DB::table('projects')->insert([
-            'project_category_id'   => 1,
+        Project::create([
             'name'                  => 'Belssage',
             'live_url'              => 'http://www.belssage.com',
             'admin_url'             => null,
@@ -45,8 +43,7 @@ class ProjectsTableSeeder extends Seeder
             'testimonial'           => null
         ]);
 
-        DB::table('projects')->insert([
-            'project_category_id'   => 2,
+        Project::create([
             'name'                  => 'bookMe',
             'live_url'              => 'https://bookme.justinc.me',
             'admin_url'             => 'https://bookme.justinc.me/admin',
@@ -56,8 +53,7 @@ class ProjectsTableSeeder extends Seeder
             'testimonial'           => null
         ]);
 
-        DB::table('projects')->insert([
-            'project_category_id'   => 2,
+        Project::create([
             'name'                  => 'fooCart',
             'live_url'              => 'https://foocart.justinc.me/',
             'admin_url'             => 'https://foocart.justinc.me/admin',
@@ -67,8 +63,7 @@ class ProjectsTableSeeder extends Seeder
             'testimonial'           => null
         ]);
 
-        DB::table('projects')->insert([
-            'project_category_id'   => 2,
+        Project::create([
             'name'                  => 'nearMe',
             'live_url'              => 'https://nearme.justinc.me/',
             'admin_url'             => null,
@@ -78,8 +73,7 @@ class ProjectsTableSeeder extends Seeder
             'testimonial'           => null
         ]);
 
-        DB::table('projects')->insert([
-            'project_category_id'   => 2,
+        Project::create([
             'name'                  => 'TweetMe',
             'live_url'              => 'https://tweetme.justinc.me/',
             'admin_url'             => null,

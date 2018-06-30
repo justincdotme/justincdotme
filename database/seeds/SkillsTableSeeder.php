@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Skill;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -12,34 +13,34 @@ class SkillsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('skills')->insert([
+        Skill::create([
             'skill' => 'Laravel 4'
         ]);
-        DB::table('skills')->insert([
+        Skill::create([
             'skill' => 'Laravel 5'
         ]);
-        DB::table('skills')->insert([
+        Skill::create([
             'skill' => 'Object Oriented PHP'
         ]);
-        DB::table('skills')->insert([
+        Skill::create([
             'skill' => 'MySQL'
         ]);
-        DB::table('skills')->insert([
+        Skill::create([
             'skill' => 'Javascript & jQuery'
         ]);
-        DB::table('skills')->insert([
+        Skill::create([
             'skill' => 'HTML & CSS (SCSS)'
         ]);
-        DB::table('skills')->insert([
+        Skill::create([
             'skill' => 'Web Server Administration'
         ]);
-        DB::table('skills')->insert([
+        Skill::create([
             'skill' => 'ORM (Eloquent)'
         ]);
-        DB::table('skills')->insert([
+        Skill::create([
             'skill' => 'REST API Development'
         ]);
-        DB::table('skills')->insert([
+        Skill::create([
             'skill' => 'REST API Consumption'
         ]);
     }

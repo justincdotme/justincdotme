@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+    protected $guarded = [];
+
     /**
      * Load project images 1-n relationship.
      *
@@ -13,7 +15,7 @@ class Project extends Model
      */
     public function images()
     {
-        return $this->hasMany('App\Models\ProjectImage');
+        return $this->hasMany(ProjectImage::class);
     }
 
     /**
@@ -23,6 +25,6 @@ class Project extends Model
      */
     public function skills()
     {
-        return $this->belongsToMany('App\Models\Skill');
+        return $this->belongsToMany(Skill::class, 'project_skill', 'project_id', 'skill_id');
     }
 }

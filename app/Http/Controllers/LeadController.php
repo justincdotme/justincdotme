@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Transformers\PageTransformer;
-use App\Models\Page;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -14,36 +12,8 @@ use Illuminate\Support\Facades\Validator;
 
 class LeadController extends Controller
 {
-    //Page name in Page model.
-    protected $page;
-
     //Sender's email address
     protected $senderEmail;
-
-    public function __construct()
-    {
-        $this->page = 'contact';
-        $this->_senderEmail = null;
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function index()
-    {
-        try {
-            $page = Page::getPageData($this->page)->firstOrFail();
-        } catch(Exception $e) {
-            return $this->response->errorNotFound();
-        }
-
-        return $this->response()
-            ->item($page, new PageTransformer())
-            ->addMeta('status', 'success')
-            ->setStatusCode(200);
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -73,44 +43,39 @@ class LeadController extends Controller
             return redirect('/#contact')->withErrors($validator->errors())->withInput($request->all());
         }
 
-        try {
-            $name = $request->input('name');
-            $this->_senderEmail = $request->input('email');
-            $phone = $request->input('phone');
-            $message = $request->input('message');
-
-            //Construct the email message
-            $details['name'] = $name;
-            $details['email'] = $this->_senderEmail;
-            $details['phone'] = $phone;
-            $details['content'] = $message;
-            $details['ipAddress'] = $request->getClientIp();
-
-            //Send confirmation to customer
-            Mail::send('emails.message-confirm', $details, function($message)
-            {
-                $message->to($this->_senderEmail)->subject('Confirmation');
-                $message->replyTo('info@justinc.me');
-            });
-
-            //Send customer info to administrator
-            Mail::send('emails.new-message', $details, function($message)
-            {
-                $message->to('info@justinc.me')->subject('New justinc.me Contact Request');
-            });
-
-        } catch(Exception $e)
+        if (!$this->isSpam())
         {
-            if($request->ajax())
+            try {
+                $name = $request->input('name');
+                $this->_senderEmail = $request->input('email');
+                $phone = $request->input('phone');
+                $message = $request->input('message');
+
+                //Construct the email message
+                $details['name'] = $name;
+                $details['email'] = $this->_senderEmail;
+                $details['phone'] = $phone;
+                $details['content'] = $message;
+                $details['ipAddress'] = $request->getClientIp();
+
+                //Send customer info to administrator
+                Mail::send('emails.new-message', $details, function($message)
+                {
+                    $message->to('info@justinc.me')->subject('New justinc.me Contact Request');
+                });
+
+            } catch(Exception $e)
             {
-                return response()->json([
-                    'status' => 'error'
-                ]);
+                if($request->ajax())
+                {
+                    return response()->json([
+                        'status' => 'error'
+                    ]);
+                }
+                return redirect('/#contact')->withInput($request->all());
             }
-            return redirect('/#contact')->withInput($request->all());
         }
 
-        //Return a JSON response if the form was submitted via AJAX.
         if($request->ajax())
         {
             return response()->json([
@@ -119,42 +84,48 @@ class LeadController extends Controller
                 ->withCookie(cookie()->forever('cconf', true));
         }
 
-        //Return a redirect if the form was not submitted via AJAX.
         return redirect('/#contact')
             ->withCookie(cookie()->forever('cconf', true));
     }
 
     /**
-     * Display the specified resource.
+     * Very basic method for spam detection.
      *
-     * @param  int  $id
-     * @return Response
+     * @return bool
      */
-    public function show($id)
+    protected function isSpam()
     {
-        //
-    }
+        $spammyTlds = [
+            'ru',
+            'gq',
+            'ga',
+            'cf',
+            'cn',
+            'ml',
+            'tk',
+            'men',
+            'top',
+            'click',
+            'date',
+            'biz',
+            'bid',
+            'loan',
+            'work',
+            'trade'
+        ];
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request  $request
-     * @param  int  $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+        $emailTld = explode('.', request('email'));
+        $emailTld = end($emailTld);
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        //
+        if ('' != request('reason_for_contact'))
+        {
+            return true;
+        }
+
+        if (in_array($emailTld, $spammyTlds)) {
+            return true;
+        }
+
+        return false;
     }
 }

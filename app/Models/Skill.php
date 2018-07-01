@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Skill extends Model
 {
+    protected $guarded = [];
+
     /**
      * Load projects n-n relationship.
      *
@@ -13,6 +15,6 @@ class Skill extends Model
      */
     public function projects()
     {
-        return $this->belongsToMany('App\Models\Project');
+        return $this->belongsToMany(Project::class);
     }
 }

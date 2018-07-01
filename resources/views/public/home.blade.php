@@ -218,7 +218,9 @@
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
                                         <a target="_BLANK" href="{{ $project->live_url }}">
-                                            <img alt="{{ (is_null($project->images()->first()->alt_text)) ? $project->name : $project->images()->first()->alt_text }}" src="{{ $project->images()->first()->image_path }}">
+                                            @if(null !== $project->images()->first())
+                                                <img alt="{{ (is_null($project->images()->first())) ? $project->name : $project->images()->first()->alt_text }}" src="{{ $project->images()->first()->image_path }}">
+                                            @endif
                                         </a>
                                     </div>
                                 </div>
@@ -338,6 +340,7 @@
                                         <label for="message">What can I do for you?</label><br>
                                         <textarea required=""  placeholder="What can I do for you?" rows="10" class="form-control required" name="message"></textarea>
                                     </div>
+                                    <input type="text" value="" maxlength="12" name="reason_for_contact" style="display:none;">
                                     <button id="contact-btn" class="btn info-button btn-lg" type="submit">Contact</button>
                                 {!! Form::close() !!}
                             @else

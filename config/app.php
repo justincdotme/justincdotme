@@ -149,6 +149,7 @@ return [
          * Third party Service Providers
          */
         Collective\Html\HtmlServiceProvider::class,
+        Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider::class,
 
     ],
 

@@ -31,11 +31,13 @@ class LeadController extends Controller
             return preg_match('/^[\pL\s]+$/u', $value);
         });
 
+        //https://packagist.org/packages/buzz/laravel-google-captcha
         $validator = Validator::make($request->all(), [
             'name' => 'required|alpha_spaces',
             'email' => 'required|email',
             'message' => 'required',
-            'phone' => 'numeric'
+            'phone' => 'numeric',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
 
         if ($validator->fails())
@@ -43,38 +45,36 @@ class LeadController extends Controller
             return redirect('/#contact')->withErrors($validator->errors())->withInput($request->all());
         }
 
-        if (!$this->isSpam())
-        {
-            try {
-                $name = $request->input('name');
-                $this->_senderEmail = $request->input('email');
-                $phone = $request->input('phone');
-                $message = $request->input('message');
+        try {
+            $name = $request->input('name');
+            $this->_senderEmail = $request->input('email');
+            $phone = $request->input('phone');
+            $message = $request->input('message');
 
-                //Construct the email message
-                $details['name'] = $name;
-                $details['email'] = $this->_senderEmail;
-                $details['phone'] = $phone;
-                $details['content'] = $message;
-                $details['ipAddress'] = $request->getClientIp();
+            //Construct the email message
+            $details['name'] = $name;
+            $details['email'] = $this->_senderEmail;
+            $details['phone'] = $phone;
+            $details['content'] = $message;
+            $details['ipAddress'] = $request->getClientIp();
 
-                //Send customer info to administrator
-                Mail::send('emails.new-message', $details, function($message)
-                {
-                    $message->to('info@justinc.me')->subject('New justinc.me Contact Request');
-                });
-
-            } catch(Exception $e)
+            //Send customer info to administrator
+            Mail::send('emails.new-message', $details, function($message)
             {
-                if($request->ajax())
-                {
-                    return response()->json([
-                        'status' => 'error'
-                    ]);
-                }
-                return redirect('/#contact')->withInput($request->all());
+                $message->to('info@justinc.me')->subject('New justinc.me Contact Request');
+            });
+
+        } catch(Exception $e)
+        {
+            if($request->ajax())
+            {
+                return response()->json([
+                    'status' => 'error'
+                ]);
             }
+            return redirect('/#contact')->withInput($request->all());
         }
+
 
         if($request->ajax())
         {
@@ -86,46 +86,5 @@ class LeadController extends Controller
 
         return redirect('/#contact')
             ->withCookie(cookie()->forever('cconf', true));
-    }
-
-    /**
-     * Very basic method for spam detection.
-     *
-     * @return bool
-     */
-    protected function isSpam()
-    {
-        $spammyTlds = [
-            'ru',
-            'gq',
-            'ga',
-            'cf',
-            'cn',
-            'ml',
-            'tk',
-            'men',
-            'top',
-            'click',
-            'date',
-            'biz',
-            'bid',
-            'loan',
-            'work',
-            'trade'
-        ];
-
-        $emailTld = explode('.', request('email'));
-        $emailTld = end($emailTld);
-
-        if ('' != request('reason_for_contact'))
-        {
-            return true;
-        }
-
-        if (in_array($emailTld, $spammyTlds)) {
-            return true;
-        }
-
-        return false;
     }
 }

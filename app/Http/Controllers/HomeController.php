@@ -26,8 +26,9 @@ class HomeController extends Controller
         //Check if the contact submission cookie has been set
         $contacted = ($request->cookie('cconf')) ? $request->cookie('cconf') : false;
 
-        return view('public.home')
-            ->withContacted($contacted)
-            ->withProjects($projects);
+        return view('public.home', [
+            'contacted' => $contacted,
+            'projects' => $projects
+        ]);
     }
 }

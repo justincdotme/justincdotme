@@ -15,43 +15,43 @@ class ProjectImagesTableSeeder extends Seeder
     {
         Image::create([
             'project_id'    => 1,
-            'image_path'     => '/img/portfolio/fawkesfx-shot.jpg',
+            'image_path'     => '/images/portfolio/fawkesfx-shot.jpg',
             'alt_text'      => null
         ]);
 
         Image::create([
             'project_id'    => 2,
-            'image_path'     => '/img/portfolio/reliableMobileLabs-shot.jpg',
+            'image_path'     => '/images/portfolio/reliableMobileLabs-shot.jpg',
             'alt_text'      => null
         ]);
 
         Image::create([
             'project_id'    => 3,
-            'image_path'     => '/img/portfolio/belssage-shot.jpg',
+            'image_path'     => '/images/portfolio/belssage-shot.jpg',
             'alt_text'      => null
         ]);
 
         Image::create([
             'project_id'    => 4,
-            'image_path'     => '/img/portfolio/bookme-shot.jpg',
+            'image_path'     => '/images/portfolio/bookme-shot.jpg',
             'alt_text'      => null
         ]);
 
         Image::create([
             'project_id'    => 5,
-            'image_path'     => '/img/portfolio/foocart-shot.jpg',
+            'image_path'     => '/images/portfolio/foocart-shot.jpg',
             'alt_text'      => null
         ]);
 
         Image::create([
             'project_id'    => 6,
-            'image_path'     => '/img/portfolio/findmyisp-shot.jpg',
+            'image_path'     => '/images/portfolio/findmyisp-shot.jpg',
             'alt_text'      => null
         ]);
 
         Image::create([
             'project_id'    => 7,
-            'image_path'     => '/img/portfolio/tweetme-shot.jpg',
+            'image_path'     => '/images/portfolio/tweetme-shot.jpg',
             'alt_text'      => null
         ]);
     }

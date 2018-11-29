@@ -1,0 +1,434 @@
+// Variables
+@import 'variables';
+
+//libs
+@import '~bootstrap/scss/bootstrap';
+@import "~font-awesome/scss/font-awesome.scss";
+@import "~animate.css/source/_base.css";
+@import "~animate.css/source/specials/rollIn.css";
+
+body {
+  margin: 0;
+  color: $nearBlack;
+  font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+  .circular {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .circular {
+    width: 176px;
+    height: 176px;
+    border-radius: 88px;
+    -webkit-border-radius: 88px;
+    -moz-border-radius: 88px;
+  }
+  div.vcard.contact {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px){
+  .circular {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    margin: 0.5em auto 1.5em auto;
+  }
+  #about div#bio-text {
+    padding-left: 0px;
+  }
+  .skill-col {
+    width: 250px;
+    margin: 0 auto;
+  }
+  h2.project-title,
+  h3.project-case-study,
+  h3.testimonial-header,
+  p.project-case-p,
+  div.vcard.contact,
+  .skills-head,
+  div#bio-text p {
+    text-align: center;
+  }
+  #contact button#contact-btn {
+    width: 100%;
+    padding: 1em;
+    margin-top: 15px;
+  }
+}
+
+/* Homepage header media queries */
+h1.home-head {
+  @media (min-width: 970px) {
+    font-size: 5.25em;
+  }
+  @media (min-width: 750px) and (max-width: 970px) {
+    font-size: 4em;
+  }
+  @media (min-width: 561px) and (max-width: 749px) {
+    font-size: 3.4em;
+  }
+  @media (min-width: 381px) and (max-width: 560px) {
+    font-size: 3.2em;
+  }
+  @media (max-width: 380px) {
+    font-size: 3em;
+  }
+}
+
+/* Main styles */
+h1, h2, h3, h4, h5 {
+  font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
+}
+
+#home {
+  background: url('/images/pdx_bg_dark_1.jpg') 50% 0 repeat fixed;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  height: 100vh;
+
+  .head-container {
+    margin-top: 15%;
+  }
+
+  h1.home-head {
+    background-color: rgba(0, 0, 0, 0.9);
+    line-height: 1.425em;
+    display: inline;
+  }
+
+  h1.home-head span {
+    padding: 0.2em;
+  }
+}
+
+
+#about {
+  font-size: 1.125em;
+  background: $orange;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+
+  #skillset {
+    background: #fff;
+    padding: 2em 0;
+  }
+
+  #bio {
+    padding: 2em 0 4em 0;
+  }
+
+  #bio-text {
+    padding-left: 3em;
+  }
+
+  #bio-image {
+    background: url('/images/justin-headshot-250.jpg') no-repeat;
+    border: 6px solid rgba(255, 255, 255, 1);
+    background-size: 100%;
+  }
+
+  ul.skills {
+    width: 200px;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    //IE hackery
+    *display:inline;
+    margin: 0 auto 1em auto;
+    text-align: left;
+  }
+}
+
+#portfolio-wrapper {
+  background: url('/images/pdx_bg_dark_1.jpg') 50% 0 repeat fixed;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+
+  .project-container {
+    margin-bottom: 4.5em;
+    padding: 1.25em;
+  }
+
+  h3.project-case-study,
+  h3.skills-head {
+    margin-top: 0;
+  }
+
+  ul.skills {
+    padding-left: 1em;
+  }
+  a {
+    &:link {
+      color: $orange;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $darkOrange;
+      text-decoration: underline;
+    }
+    &:active {
+      color: $darkOrange;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $darkOrange;
+      text-decoration: none;
+    }
+  }
+}
+
+#contact-wrapper {
+  background: url('/images/pdx_bg_dark_1.jpg') 50% 0 repeat fixed;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+
+  //Hide contact error div by default
+  div.contact-errors {
+    display: none;
+  }
+
+  .contact-form-error {
+    border: 2px solid $error;
+  }
+}
+
+#contact {
+  padding-bottom: 4em;
+
+  #contact-btn {
+    -webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    -moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    color:#fff;
+    background-color:$orange;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:none;
+    padding:4px 16px;
+  }
+
+  #social-media {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+  }
+
+  #social-media a {
+    vertical-align: top;
+    display: inline-block;
+    //IE hackery
+    *display: inline;
+    zoom: 1;
+    margin-bottom: 0.5em;
+  }
+  .distribute {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+  }
+}
+
+#footer {
+  background: $orange;
+  margin: 0 auto;
+  padding: 4em;
+  color: #fff;
+}
+
+ul.skills {
+  list-style-type: none;
+}
+
+#portfolio-wrapper, #contact-wrapper {
+  padding-top: 24em;
+}
+
+.white-bg {
+  background: #fff;
+}
+
+.white {
+  color: #fff;
+}
+
+.orange {
+  color: $orange;
+}
+
+.buffer-top {
+  padding-top: 50px !important;
+}
+
+ul.skills li:before, ul.project-skill li:before {
+  font-family: 'FontAwesome';
+  content: "\f054";
+  margin:0 5px 0 -15px;
+  color: $orange;
+}
+
+.orange-hr {
+  border-color: $orange;
+}
+
+.indent {
+  text-indent: 1.25em;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Scroll Down Animation */
+a#scroll-down {
+  @-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -moz-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -moz-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -moz-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -moz-transform: translateY(-15px);
+      -ms-transform: translateY(-15px);
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+  .arrow.top-arrow {
+    bottom: 25px;
+    color: #fff;
+  }
+  .arrow {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -12px;
+    font-size: 50px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+}
+
+/* Bootstrap Overrides */
+nav.bg-inverse {
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 0 none;
+  color: $darkGrey;
+}
+
+.bg-inverse a {
+  color: $darkGrey;
+}
+
+.thumbnail {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.bg-inverse .navbar-nav > .active,
+.bg-inverse .navbar-nav > .active > a,
+.bg-inverse .navbar-nav > .active > a:hover,
+.bg-inverse .navbar-nav > .active > a:focus {
+  background-image: none;
+}
+
+.nav-item a {
+  padding: 10px 15px;
+}
+
+div.dropdown-menu {
+  background-color: #080808;
+  li > a {
+    color: #fff;
+  }
+  li.active{
+    a,
+    a:active,
+    a:focus,
+    a:hover{
+      background-color: $nearBlack;
+    }
+  }
+
+  li > a:hover,
+  .dropdown-menu li > a:focus,
+  .dropdown-submenu:hover > a {
+    background-image: none;
+    background-color: $nearBlack;
+    color: #eee;
+  }
+  ul.work-menu.dropdown-menu .active a {
+    background-color: $orange;
+  }
+  border: none;
+}

@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
@@ -42,6 +39,12 @@ class LeadController extends Controller
 
         if ($validator->fails())
         {
+            if (request()->ajax()) {
+                return response()->json([
+                    'status' => 'error',
+                    'errors' => $validator->errors()
+                ], 422);
+            }
             return redirect('/#contact')->withErrors($validator->errors())->withInput($request->all());
         }
 
@@ -59,6 +62,7 @@ class LeadController extends Controller
             $details['ipAddress'] = $request->getClientIp();
 
             //Send customer info to administrator
+            //TODO - Queue this
             Mail::send('emails.new-message', $details, function($message)
             {
                 $message->to('info@justinc.me')->subject('New justinc.me Contact Request');
@@ -69,22 +73,26 @@ class LeadController extends Controller
             if($request->ajax())
             {
                 return response()->json([
-                    'status' => 'error'
+                    'status' => 'error',
+                    'errors' => [
+                        'All' => [
+                            'An error has occurred.'
+                        ]
+                    ]
                 ]);
             }
             return redirect('/#contact')->withInput($request->all());
         }
 
+        session(['contacted', true]);
 
         if($request->ajax())
         {
             return response()->json([
                 'status' => 'success
-                '])
-                ->withCookie(cookie()->forever('cconf', true));
+            ']);
         }
 
-        return redirect('/#contact')
-            ->withCookie(cookie()->forever('cconf', true));
+        return redirect('/#contact');
     }
 }

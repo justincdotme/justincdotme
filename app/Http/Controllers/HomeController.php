@@ -2,14 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Transformers\PageTransformer;
-use App\Models\Page;
 use App\Models\Project;
-use Exception;
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use League\Fractal;
 
 class HomeController extends Controller
 {
@@ -23,12 +17,13 @@ class HomeController extends Controller
     {
         //Get the projects, eager load the project images and skills
         $projects = Project::with('images', 'skills')->get();
-        //Check if the contact submission cookie has been set
-        $contacted = ($request->cookie('cconf')) ? $request->cookie('cconf') : false;
+        //Has the contact form been submitted?
+        $contacted = session()->get('contacted', false);
 
         return view('public.home', [
             'contacted' => $contacted,
-            'projects' => $projects
+            'projects' => $projects,
+            'title' => 'Justin Christenson is a web Developer in Vancouver, WA.'
         ]);
     }
 }

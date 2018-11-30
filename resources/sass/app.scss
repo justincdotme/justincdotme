@@ -16,7 +16,11 @@ body {
 
 @media (min-width: 1px) and (max-width: 755px) {
   li.nav-item {
-    padding: 8px 0;
+    padding: 12px 0;
+  }
+
+  .thumbnail {
+    margin: 6px auto;
   }
 }
 
@@ -28,6 +32,11 @@ body {
     border-radius: 125px;
     -webkit-border-radius: 125px;
     -moz-border-radius: 125px;
+  }
+
+  #headshot-container {
+    position: relative;
+    top: -44px;
   }
 }
 
@@ -160,6 +169,10 @@ h1, h2, h3, h4, h5 {
     *display:inline;
     margin: 0 auto 1em auto;
     text-align: left;
+  }
+
+  .inline {
+    display: inline-block;
   }
 }
 

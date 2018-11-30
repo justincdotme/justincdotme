@@ -22,7 +22,7 @@
     <meta name="Rating" content="General"/>
     <meta name="format-detection" content="telephone=no"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="vW4bzfGyDJ8ZCah1pLjl2ka-B0NpyFHtgt0WPiF3heA" />
+    <meta name="google-site-verification" content="{{ $meta['site_verification'] }}" />
     <link rel="apple-touch-icon" sizes="57x57" href="/images/ico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/ico/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/images/ico/apple-icon-72x72.png">
@@ -123,10 +123,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-md-3">
-                            <div class="circular wow rollIn" id="bio-image"></div>
+                        <div id="headshot-container" class="col-lg-3 col-12 text-center">
+                            <div class="inline circular wow rollIn" id="bio-image"></div>
                         </div>
-                        <div class="col-12 col-9-md" id="bio-text">
+                        <div class="col-lg-9 col-12" id="bio-text">
                             <p class="indent white">I'm a web developer, open source enthusiast and Jedi Apprentice living in Vancouver, WA. I started my career as a front end developer while earning a degree in Web Design and Interactive Media in 2011.</p>
                             <p class="indent white">After working as a front end developer for a while, I started to venture into server side concepts and soon realized that I have a passion for working on all sides of the stack. At this point, I started picking up back end projects and learning the LAMP stack. </p>
                             <p class="indent white">I currently work as a web developer creating and maintaining dynamic, data driven web applications.</p>
@@ -147,30 +147,29 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-4 text-center">
+                <div class="col-12 col-lg-4 text-center">
                     <i class="fa fa-4x fa-desktop wow rollIn orange text-center"></i>
                     <h3>Front End</h3>
                     <ul class="skills">
                         <li>HTML</li>
                         <li>CSS, SCSS</li>
                         <li>JavaScript</li>
-			            <li>VueJS</li>
                         <li>jQuery</li>
 			            <li>Bootstrap</li>
                     </ul>
                 </div>
-                <div class="col-12 col-md-4 text-center">
+                <div class="col-12 col-lg-4 text-center">
                     <i class="fa fa-4x fa-database wow rollIn orange text-center"></i>
                     <h3>Back End</h3>
                     <ul class="skills">
 			            <li>Object Oriented PHP</li>
                         <li>MySQL, PostgreSQL</li>
-                        <li>Laravel</li>
+                        <li>MVC Frameworks (Laravel, Zend)</li>
                         <li>LAMP Administration</li>
-			<li>VSphere</li>
+			            <li>VSphere</li>
                     </ul>
                 </div>
-                <div class="col-12 col-md-4 text-center">
+                <div class="col-12 col-lg-4 text-center">
                     <i class="fa fa-4x fa-wrench wow rollIn orange text-center"></i>
                     <h3>Tools</h3>
                     <ul class="skills">
@@ -207,7 +206,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12 col-md-3 text-center">
+                                <div class="col-12 col-lg-3 text-center">
                                     <div class="thumbnail">
                                         <a target="_BLANK" href="{{ $project->live_url }}">
                                             @if(null !== $project->images()->first())
@@ -216,7 +215,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 project-details">
+                                <div class="col-12 col-lg-6 project-details">
                                     <h3 class="project-case-study">Case Study</h3>
                                     <div class="">
                                         {!! $project->case_study !!}
@@ -239,7 +238,7 @@
                                         @endif
                                     </p>
                                 </div>
-                                <div class="col-12 col-md-3 skill-col">
+                                <div class="col-12 col-lg-3 skill-col">
                                     <h3 class="skills-head project-detail">Skills Used</h3>
                                     <ul class="skills">
                                         @foreach($project->skills()->get() as $skill)
@@ -266,7 +265,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-lg-4">
                             <div class="panel panel-default contact-panel inner-panel">
                                 <div class="panel-body">
                                     <div class="vcard contact">
@@ -292,7 +291,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-lg-4">
                             @if(!$contacted)
                                 <div class="row contact-errors">
                                     <div class="col-12">
@@ -376,8 +375,8 @@
 <!-- Begin Footer -->
 <footer id="footer">
     <div class="row">
-        <div class="col-12 col-md-6 offset-md-3">
-            <p class="text-center">Copyright 2016 &copy; Justin Christenson. <br/>
+        <div class="col-12 col-lg-6 offset-lg-3">
+            <p class="text-center">Copyright {{ date('Y') }} &copy; Justin Christenson. <br/>
             All rights reserved.</p>
         </div>
     </div>

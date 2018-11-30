@@ -123,6 +123,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'google_site_verification' => env('G_SITE_VERIFICATION'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

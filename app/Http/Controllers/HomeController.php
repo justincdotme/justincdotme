@@ -18,7 +18,10 @@ class HomeController extends Controller
         return view('public.home', [
             'contacted' => session()->get('contacted', false),
             'projects' => Project::with('images', 'skills')->get(),
-            'title' => 'Justin Christenson is a web Developer in Vancouver, WA.'
+            'title' => 'Justin Christenson is a web Developer in Vancouver, WA.',
+            'meta' => [
+                'site_verification' => config('app.google_site_verification')
+            ]
         ]);
     }
 }

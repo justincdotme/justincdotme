@@ -57,50 +57,23 @@ justinc.contactForm.autoHyphenate = function() {
     });
 };
 
+/**
+ * Handle display of validation messages.
+ */
 justinc.contactForm.showErrors = function(errors) {
-    //TODO - Only show a generic error if something unexpected happens, like an exception, or nuclear war.
-    //TODO - Otherwise, show the error above each field.
-    //TODO - Translate the GRECAPTCHA field name so that we can show it above its respective field.
-    let errorContainer = $('#errors');
-    let errorList = errorContainer.find('ul');
-    errorContainer.removeClass('hidden').addClass('hidden');
-    errorList.empty();
-
+    $(':input.has-error').removeClass('has-error');
+    $('span.error').remove();
     for (let field in errors) {
         if (errors.hasOwnProperty(field)) {
             //Show the error
-            for (let x = 0; x < errors[field].length; x++) {
-                errorList.append("<li>" + errors[field][x] + "</li>");
+            if ('g-recaptcha-response' == field) {
+                //TODO - Show recaptcha message
+                jQuery('div.g-recaptcha').before('<span class="error">' + errors[field][0] + '</span>');
+            } else {
+                $(':input[name="' + field + '"]').before('<span class="error">' + errors[field][0] + '</span>');
             }
         }
     }
-    errorContainer.removeClass('hidden');
-};
-
-/**
- * Check that each required field has a value.
- *
- * @returns  {boolean}
- */
-justinc.contactForm.checkRequiredFields = function() {
-    var passedValidation = true;
-    $('.required').each(function()
-    {
-        var empty = (!!$(this).val() === 'undefined' || $(this).val() === '');
-
-        if(empty)
-        {
-            //TODO - Refactor to use justinc.contactForm.showErrors
-            $('li.validation-error').remove();
-            $('.contact-errors').show().find('ul.messages').append('<li class="validation-error">Please fill out all required fields.</li>');
-            $(this).addClass('contact-form-error');
-            passedValidation = false;
-        }else {
-            $('li.validation-error').remove();
-            $(this).removeClass('contact-form-error');
-        }
-    });
-    return passedValidation;
 };
 
 justinc.contactForm.resetButton = function (submitBtn) {
@@ -112,24 +85,21 @@ justinc.contactForm.resetButton = function (submitBtn) {
  */
 $('form#contact-form').submit(function(e) {
     let submitBtn = $(this).find('button[type="submit"]');
-    if(justinc.contactForm.checkRequiredFields())
-    {
-        submitBtn.text('Sending...');
-        var url = $(this).attr('action');
-        var data = $(this).serialize();
-        $.post(url, data, function(d)
-        {
-            let response = d.responseJSON;
-            if ('error' == response.status) {
-                justinc.contactForm.resetButton(submitBtn);
-                justinc.contactForm.showErrors(response.errors);
-            }
-            $('form#contact-form').slideUp().after('<h1>Thank you, I will contact you soon!</h1>');
-        }, 'json').fail(function (d) {
+    submitBtn.text('Sending...');
+    var url = $(this).attr('action');
+    var data = $(this).serialize();
+
+    $.post(url, data, function(d) {
+        if ('error' == d.status) {
             justinc.contactForm.resetButton(submitBtn);
-            justinc.contactForm.showErrors(d.responseJSON.errors);
-        });
-    }
+            justinc.contactForm.showErrors(response.errors);
+        }
+        $('form#contact-form').slideUp().after('<h1>Thank you, I will contact you soon!</h1>');
+    }, 'json').fail(function (d) {
+        justinc.contactForm.resetButton(submitBtn);
+        justinc.contactForm.showErrors(d.responseJSON.errors);
+    });
+
     e.preventDefault();
 });
 

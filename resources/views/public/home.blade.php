@@ -10,7 +10,7 @@
     <link rel="canonical" href="http://justinc.me"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <meta name="copyright" content="2016 Justin Christenson, Vancouver, WA. All Rights Reserved"/>
+    <meta name="copyright" content="{{ date('Y') }} Justin Christenson, Vancouver, WA. All Rights Reserved"/>
     <meta name="author" content="Justin Christenson"/>
     <meta name="city" content="Vancouver"/>
     <meta name="state" content="Washington"/>
@@ -45,7 +45,6 @@
 
     <link rel="author" href="//plus.google.com/115474380698631066615/posts"/>
     <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-
 
     <link rel="stylesheet" href="/css/app.css">
 </head>
@@ -124,10 +123,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-12 col-md-3">
                             <div class="circular wow rollIn" id="bio-image"></div>
                         </div>
-                        <div class="col-9" id="bio-text">
+                        <div class="col-12 col-9-md" id="bio-text">
                             <p class="indent white">I'm a web developer, open source enthusiast and Jedi Apprentice living in Vancouver, WA. I started my career as a front end developer while earning a degree in Web Design and Interactive Media in 2011.</p>
                             <p class="indent white">After working as a front end developer for a while, I started to venture into server side concepts and soon realized that I have a passion for working on all sides of the stack. At this point, I started picking up back end projects and learning the LAMP stack. </p>
                             <p class="indent white">I currently work as a web developer creating and maintaining dynamic, data driven web applications.</p>
@@ -148,7 +147,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-4 text-center">
+                <div class="col-12 col-md-4 text-center">
                     <i class="fa fa-4x fa-desktop wow rollIn orange text-center"></i>
                     <h3>Front End</h3>
                     <ul class="skills">
@@ -160,7 +159,7 @@
 			            <li>Bootstrap</li>
                     </ul>
                 </div>
-                <div class="col-4 text-center">
+                <div class="col-12 col-md-4 text-center">
                     <i class="fa fa-4x fa-database wow rollIn orange text-center"></i>
                     <h3>Back End</h3>
                     <ul class="skills">
@@ -171,7 +170,7 @@
 			<li>VSphere</li>
                     </ul>
                 </div>
-                <div class="col-4 text-center">
+                <div class="col-12 col-md-4 text-center">
                     <i class="fa fa-4x fa-wrench wow rollIn orange text-center"></i>
                     <h3>Tools</h3>
                     <ul class="skills">
@@ -208,7 +207,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-12 col-md-3 text-center">
                                     <div class="thumbnail">
                                         <a target="_BLANK" href="{{ $project->live_url }}">
                                             @if(null !== $project->images()->first())
@@ -217,7 +216,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-6 project-details">
+                                <div class="col-12 col-md-6 project-details">
                                     <h3 class="project-case-study">Case Study</h3>
                                     <div class="">
                                         {!! $project->case_study !!}
@@ -240,7 +239,7 @@
                                         @endif
                                     </p>
                                 </div>
-                                <div class="col-3 skill-col">
+                                <div class="col-12 col-md-3 skill-col">
                                     <h3 class="skills-head project-detail">Skills Used</h3>
                                     <ul class="skills">
                                         @foreach($project->skills()->get() as $skill)
@@ -267,13 +266,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <div class="panel panel-default contact-panel inner-panel">
                                 <div class="panel-body">
                                     <div class="vcard contact">
                                         <h4 class="tel">Phone: <a href="tel:+16053817180">605-381-7180</a></h4>
                                         <h4 class="email">Email: <a href="mailto:info@justinc.me" class="email">info@justinc.me</a></h4>
-                                        <h4 class="skype">Skype: <a href="skype:justinc.me?chat" class="skype">justinc.me</a></h4>
                                     </div>
                                     <hr class="orange-hr"/>
                                     <div id="social-media">
@@ -294,15 +292,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8">
-                            <div id="errors" class="col-12 alert alert-danger @if(!$errors->any()) hidden @endif">
-                                <h1>Error <span class="glyphicon glyphicon-exclamation-sign"></span></h1>
-                                <ul>
-                                    @foreach($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                        <div class="col-12 col-md-4">
                             @if(!$contacted)
                                 <div class="row contact-errors">
                                     <div class="col-12">
@@ -316,21 +306,57 @@
                                 </div>
                                 {!! Form::open(['route' => 'lead.store', 'action' => 'POST', 'id' => 'contact-form']) !!}
                                     <div class="form-group">
-                                        <label for="name">Name</label><br>
-                                        <input type="text" placeholder="Full Name" required="" value="" name="name" class="form-control required">
+                                        <label for="name">Name <span class="required-label">(required)</span></label><br>
+                                        @if ($errors->has('name'))
+                                            <span class="error">{{ $errors->get('name') }}</span>
+                                            <br>
+                                        @endif
+                                        <input
+                                                type="text"
+                                                placeholder="Full Name"
+                                                name="name"
+                                                class="form-control required {{ $errors->has('name') ? 'has-error' : '' }}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Email Address</label><br>
-                                        <input type="email" placeholder="email@address.com" required="" value="" name="email" class="form-control required">
+                                        <label for="email">Email Address <span class="required-label">(required)</span></label><br>
+                                        @if ($errors->has('email'))
+                                            <span class="error">{{ $errors->get('email') }}</span>
+                                            <br>
+                                        @endif
+                                        <input
+                                                type="email"
+                                                placeholder="email@address.com"
+                                                name="email"
+                                                class="form-control required {{ $errors->has('email') ? 'has-error' : '' }}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="phone">Phone Number</label><br>
-                                        <input type="text" placeholder="555-555-5555" value="" maxlength="12" name="phone" class="form-control">
+                                        <label for="phone">Phone Number <span class="required-label">(required)</span></label><br>
+                                        @if ($errors->has('phone'))
+                                            <span class="error">{{ $errors->get('phone') }}</span>
+                                            <br>
+                                        @endif
+                                        <input type="text"
+                                               placeholder="555-555-5555"
+                                               maxlength="12"
+                                               name="phone"
+                                               class="form-control {{ $errors->has('phone') ? 'has-error' : '' }}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="message">What can I do for you?</label><br>
-                                        <textarea required=""  placeholder="What can I do for you?" rows="10" class="form-control required" name="message"></textarea>
+                                        <label for="message">Message <span class="required-label">(required)</span></label><br>
+                                        @if ($errors->has('message'))
+                                            <span class="error">{{ $errors->get('message') }}</span>
+                                            <br>
+                                        @endif
+                                        <textarea
+                                                placeholder="How can I help?"
+                                                rows="10"
+                                                class="form-control required {{ $errors->has('message') ? 'has-error' : '' }}"
+                                                name="message"></textarea>
                                     </div>
+                                    @if ($errors->has('g-recaptcha-response'))
+                                        <span class="error">{{ $errors->get('g-recaptcha-response') }}</span>
+                                        <br>
+                                    @endif
                                     {!! app('captcha')->display() !!}
                                     <input type="text" value="" maxlength="12" name="reason_for_contact" style="display:none;">
                                     <button id="contact-btn" class="btn info-button btn-lg" type="submit">Contact</button>
@@ -350,7 +376,7 @@
 <!-- Begin Footer -->
 <footer id="footer">
     <div class="row">
-        <div class="col-6 offset-3">
+        <div class="col-12 col-md-6 offset-md-3">
             <p class="text-center">Copyright 2016 &copy; Justin Christenson. <br/>
             All rights reserved.</p>
         </div>
@@ -358,10 +384,9 @@
 </footer>
 <!-- End Footer -->
 <!-- End Body-->
+
 <script src="/js/app.js"></script>
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>--}}
 
 @include('partials.analytics')
-
 </body>
 </html>

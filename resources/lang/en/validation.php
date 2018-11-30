@@ -131,7 +131,14 @@ return [
             'rule-name' => 'custom-message',
         ],
         'g-recaptcha-response' => [
-            'required' => 'One does not simply bypass CAPTCHA'
+            'required' => 'One does not simply bypass CAPTCHA.',
+            'captcha' => 'Unable to verify CAPTCHA, please reload and try again.'
+        ],
+        'name' => [
+            'alpha_spaces' => 'Please enter a valid name.'
+        ],
+        'phone' => [
+            'numeric' => 'Please enter a valid phone number.'
         ]
     ],
 

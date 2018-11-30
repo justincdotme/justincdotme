@@ -13,6 +13,14 @@ body {
   font-size: 14px;
 }
 
+
+@media (min-width: 1px) and (max-width: 755px) {
+  li.nav-item {
+    padding: 8px 0;
+  }
+}
+
+
 @media (min-width: 1200px) {
   .circular {
     width: 250px;
@@ -251,6 +259,20 @@ h1, h2, h3, h4, h5 {
     font-size: 0;
     line-height: 0
   }
+
+  .error,
+  .required-label {
+    color: #f00;
+  }
+
+  .required-label {
+    font-size: 0.75em;
+  }
+
+  input.has-error,
+  textarea.has-error {
+    border: 1px solid #f00;
+  }
 }
 
 #footer {
@@ -297,10 +319,6 @@ ul.skills li:before, ul.project-skill li:before {
 
 .indent {
   text-indent: 1.25em;
-}
-
-.hidden {
-  display: none;
 }
 
 /* Scroll Down Animation */
@@ -404,6 +422,12 @@ nav.bg-inverse {
 
 .nav-item a {
   padding: 10px 15px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: $orange;
+  background-color: transparent;
 }
 
 div.dropdown-menu {

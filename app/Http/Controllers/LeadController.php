@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\Validator;
 
 class LeadController extends Controller
 {
-    //Sender's email address
-    protected $senderEmail;
-
     /**
      * Store a newly created resource in storage.
      *
@@ -23,8 +20,7 @@ class LeadController extends Controller
         $request->merge(['phone' => str_replace('-', '', $request->input('phone'))]);
 
         //Extend the validator to check for alphabetic characters with allowed spaces
-        Validator::extend('alpha_spaces', function($attribute, $value)
-        {
+        Validator::extend('alpha_spaces', function($attribute, $value) {
             return preg_match('/^[\pL\s]+$/u', $value);
         });
 
@@ -33,45 +29,46 @@ class LeadController extends Controller
             'name' => 'required|alpha_spaces',
             'email' => 'required|email',
             'message' => 'required',
-            'phone' => 'numeric',
+            'phone' => 'required|numeric',
             'g-recaptcha-response' => 'required|captcha'
         ]);
 
-        if ($validator->fails())
-        {
+        if ($validator->fails()) {
             if (request()->ajax()) {
                 return response()->json([
                     'status' => 'error',
                     'errors' => $validator->errors()
                 ], 422);
             }
-            return redirect('/#contact')->withErrors($validator->errors())->withInput($request->all());
+            return redirect('/#contact')
+                ->withErrors(
+                    $validator->errors()
+                )->withInput(
+                    $request->all()
+                );
         }
 
         try {
             $name = $request->input('name');
-            $this->_senderEmail = $request->input('email');
+            $senderEmail = $request->input('email');
             $phone = $request->input('phone');
             $message = $request->input('message');
 
             //Construct the email message
             $details['name'] = $name;
-            $details['email'] = $this->_senderEmail;
+            $details['email'] = $senderEmail;
             $details['phone'] = $phone;
             $details['content'] = $message;
             $details['ipAddress'] = $request->getClientIp();
 
             //Send customer info to administrator
             //TODO - Queue this
-            Mail::send('emails.new-message', $details, function($message)
-            {
+            Mail::send('emails.new-message', $details, function($message) {
                 $message->to('info@justinc.me')->subject('New justinc.me Contact Request');
             });
 
-        } catch(Exception $e)
-        {
-            if($request->ajax())
-            {
+        } catch(Exception $e) {
+            if($request->ajax()) {
                 return response()->json([
                     'status' => 'error',
                     'errors' => [
@@ -84,10 +81,9 @@ class LeadController extends Controller
             return redirect('/#contact')->withInput($request->all());
         }
 
-        session(['contacted', true]);
+        session()->put('contacted', true);
 
-        if($request->ajax())
-        {
+        if($request->ajax()) {
             return response()->json([
                 'status' => 'success
             ']);

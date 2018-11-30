@@ -15,14 +15,9 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        //Get the projects, eager load the project images and skills
-        $projects = Project::with('images', 'skills')->get();
-        //Has the contact form been submitted?
-        $contacted = session()->get('contacted', false);
-
         return view('public.home', [
-            'contacted' => $contacted,
-            'projects' => $projects,
+            'contacted' => session()->get('contacted', false),
+            'projects' => Project::with('images', 'skills')->get(),
             'title' => 'Justin Christenson is a web Developer in Vancouver, WA.'
         ]);
     }

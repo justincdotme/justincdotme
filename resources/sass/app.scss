@@ -40,20 +40,8 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
-  .circular {
-    width: 176px;
-    height: 176px;
-    border-radius: 88px;
-    -webkit-border-radius: 88px;
-    -moz-border-radius: 88px;
-  }
-  div.vcard.contact {
-    text-align: center;
-  }
-}
 
-@media (max-width: 767px){
+@media (max-width: 1199px){
   .circular {
     width: 200px;
     height: 200px;
@@ -68,6 +56,7 @@ body {
   .skill-col {
     width: 250px;
     margin: 0 auto;
+    text-align: center;
   }
   h2.project-title,
   h3.project-case-study,
@@ -144,6 +133,10 @@ h1, h2, h3, h4, h5 {
   #skillset {
     background: #fff;
     padding: 2em 0;
+
+    h3 {
+      margin: 0.55em auto 0.7em auto;
+    }
   }
 
   #bio {
@@ -169,6 +162,10 @@ h1, h2, h3, h4, h5 {
     *display:inline;
     margin: 0 auto 1em auto;
     text-align: left;
+
+    li {
+      margin-bottom: 0.5em;
+    }
   }
 
   .inline {
@@ -184,7 +181,7 @@ h1, h2, h3, h4, h5 {
   position: relative;
 
   .project-container {
-    margin-bottom: 4.5em;
+    margin-bottom: 4.75em;
     padding: 1.25em;
   }
 
@@ -193,8 +190,19 @@ h1, h2, h3, h4, h5 {
     margin-top: 0;
   }
 
+  .skills-head.project-detail.inline,
+  ul.skills.inline {
+    display: inline-block;
+    text-align: left;
+  }
+
+
   ul.skills {
     padding-left: 1em;
+
+    .project-skill {
+      margin-bottom: 0.75em;
+    }
   }
   a {
     &:link {

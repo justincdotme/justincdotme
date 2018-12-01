@@ -238,9 +238,9 @@
                                         @endif
                                     </p>
                                 </div>
-                                <div class="col-12 col-lg-3 skill-col">
+                                <div class="col-12 col-lg-3 skill-col text-center">
                                     <h3 class="skills-head project-detail">Skills Used</h3>
-                                    <ul class="skills">
+                                    <ul class="skills inline">
                                         @foreach($project->skills()->get() as $skill)
                                             <li class="project-skill">
                                                 {{ $skill->skill }}
@@ -259,7 +259,7 @@
 <!-- End Portfolio Page -->
 
 <!-- Begin Contact Page -->
-<section id="contact-wrapper" data-type="background" data-speed="2" class="pages">
+<section id="contact-wrapper" class="pages">
     <div class="white-bg buffer-top" id="contact">
         <div class="container">
             <div class="row">

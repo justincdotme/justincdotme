@@ -291,7 +291,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-lg-8">
                             @if(!$contacted)
                                 <div class="row contact-errors">
                                     <div class="col-12">

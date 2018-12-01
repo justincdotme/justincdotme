@@ -19,10 +19,11 @@
     "lodash": "^4.17.5",
     "popper.js": "^1.12",
     "vue": "^2.5.17",
-    "wowjs": "^1.1.3"
-  },
-  "dependencies": {
+    "wowjs": "^1.1.3",
     "animate.css": "^3.7.0",
     "font-awesome": "^4.7.0"
+  },
+  "dependencies": {
+
   }
 }
